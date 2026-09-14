@@ -1,0 +1,40 @@
+{
+  "nodeName": "5",
+  "node": {
+    "type": "general",
+    "title": "Roadside Watcher - Farewell",
+    "text": "Keep your blade dry and your eyes open. Roads remember careless travelers.",
+    "textAlignment": "left",
+    "textTranslationKey": false,
+    "conditionMode": "and",
+    "conditions": [],
+    "routes": [],
+    "choice": [
+      {
+        "label": "Farewell.",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "close",
+            "value": "",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      }
+    ],
+    "meta": {
+      "kind": "set",
+      "setName": "default_set",
+      "cnpcDialogId": 5,
+      "cnpcDialogTitle": "Roadside Watcher - Farewell"
+    },
+    "textFx": {
+      "image": [],
+      "sound": [],
+      "npc": []
+    }
+  }
+}

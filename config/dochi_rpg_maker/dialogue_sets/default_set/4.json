@@ -1,0 +1,59 @@
+{
+  "nodeName": "4",
+  "node": {
+    "type": "general",
+    "title": "Roadside Watcher - Offer",
+    "text": "If you pass the shrine, look for a cracked bell beside the well. Bring word of what you find, and I will owe you more than thanks.",
+    "textAlignment": "left",
+    "textTranslationKey": false,
+    "conditionMode": "and",
+    "conditions": [],
+    "routes": [],
+    "choice": [
+      {
+        "label": "I will look into it.",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "command",
+            "value": "title @s actionbar {\"text\":\"Dochi command action ran for @s\",\"color\":\"green\"}",
+            "command": "title @s actionbar {\"text\":\"Dochi command action ran for @s\",\"color\":\"green\"}"
+          },
+          {
+            "type": "goto",
+            "value": "5",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      },
+      {
+        "label": "Not today.",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "goto",
+            "value": "5",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      }
+    ],
+    "meta": {
+      "kind": "set",
+      "setName": "default_set",
+      "cnpcDialogId": 4,
+      "cnpcDialogTitle": "Roadside Watcher - Offer"
+    },
+    "textFx": {
+      "image": [],
+      "sound": [],
+      "npc": []
+    }
+  }
+}

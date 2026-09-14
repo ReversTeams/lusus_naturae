@@ -1,0 +1,100 @@
+{
+  "id": "dochi_rpg_maker:custom_health_bar",
+  "name": "Compact Health Bar",
+  "mode": "VANILLA_REPLACEMENT",
+  "replaceVanilla": "HEALTH",
+  "version": 1,
+  "enabled": false,
+  "elements": [
+    {
+      "id": "health_group",
+      "type": "GROUP",
+      "transform": {
+        "anchor": "BOTTOM_CENTER",
+        "x": -196,
+        "y": -45,
+        "width": 154,
+        "height": 18,
+        "scale": 1.0,
+        "rotation": 0.0,
+        "zIndex": 10
+      },
+      "children": [
+        {
+          "id": "health_background",
+          "type": "IMAGE",
+          "renderer": {
+            "backgroundColor": "#AA111820",
+            "frameColor": "#AA455064"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 0,
+            "width": 154,
+            "height": 18,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 0
+          }
+        },
+        {
+          "id": "health_fill",
+          "type": "BAR",
+          "binding": {
+            "type": "VANILLA_HEALTH",
+            "field": "ratio"
+          },
+          "renderer": {
+            "type": "BAR",
+            "skin": "DRM_GAUGE",
+            "fillMode": "HORIZONTAL_LEFT_TO_RIGHT",
+            "backgroundColor": "#55111820",
+            "fillColor": "#FFE05A5A",
+            "frameColor": "#00000000",
+            "lossColor": "#FFFFD45C",
+            "lossDelayTicks": 4,
+            "lossDurationTicks": 10
+          },
+          "animation": {
+            "type": "SMOOTH_VALUE_LERP",
+            "durationTicks": 8
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 3,
+            "y": 3,
+            "width": 148,
+            "height": 12,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 1
+          }
+        },
+        {
+          "id": "health_text",
+          "type": "TEXT",
+          "binding": {
+            "type": "VANILLA_HEALTH",
+            "format": "{current}/{max}"
+          },
+          "renderer": {
+            "color": "#FFFFFF",
+            "shadow": true,
+            "align": "CENTER"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 3,
+            "width": 154,
+            "height": 12,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 2
+          }
+        }
+      ]
+    }
+  ]
+}

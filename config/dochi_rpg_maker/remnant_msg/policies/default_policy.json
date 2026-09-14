@@ -1,0 +1,14 @@
+{
+  "type": "remnant_msg_policy",
+  "id": "default_policy",
+  "name": "Default Remnant Msg Policy",
+  "generalUseAllowed": true,
+  "generalCanWriteMessage": true,
+  "generalCanUseJson": false,
+  "generalCanUseTriggers": false,
+  "adminCanUseJson": true,
+  "adminCanUseTriggers": true,
+  "consumeSetterOnGeneralUse": false,
+  "markerLifetimeTicks": 0,
+  "maxMessageLength": 4096
+}

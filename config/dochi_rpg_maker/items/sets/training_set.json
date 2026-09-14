@@ -1,0 +1,32 @@
+{
+  "format": "dochi_rpg_maker.item_set_definition",
+  "version": 1,
+  "id": "training_set",
+  "displayName": "Training Set",
+  "displayNameTranslationKey": false,
+  "description": "A starter example for cumulative set bonuses.",
+  "statSet": "default_stats",
+  "enabled": true,
+  "tiers": [
+    {
+      "pieces": 1,
+      "description": "Training fundamentals",
+      "statBonuses": [
+        { "stat": "strength", "amount": 1 }
+      ],
+      "attributeModifiers": [
+        { "attribute": "minecraft:generic.movement_speed", "amount": 0.02, "operation": "multiply_base" }
+      ]
+    },
+    {
+      "pieces": 2,
+      "description": "Training discipline",
+      "statBonuses": [
+        { "stat": "strength", "amount": 2 }
+      ],
+      "attributeModifiers": [
+        { "attribute": "minecraft:generic.max_health", "amount": 2.0, "operation": "add" }
+      ]
+    }
+  ]
+}

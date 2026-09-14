@@ -1,0 +1,12 @@
+{
+  "type": "popup_policy",
+  "version": 1,
+  "id": "default_policy",
+  "commandPermissionLevel": 2,
+  "allowTextOverride": true,
+  "allowTimingOverride": true,
+  "maxActivePerPlayer": 4,
+  "maxQueuedPerPlayer": 16,
+  "maxTextLength": 2048,
+  "maxDurationTicks": 72000
+}

@@ -1,0 +1,68 @@
+{
+  "nodeName": "2",
+  "node": {
+    "type": "general",
+    "title": "Roadside Watcher - Greeting",
+    "text": "The road has been quiet since dawn. Quiet roads usually mean trouble is choosing its moment.",
+    "textAlignment": "left",
+    "textTranslationKey": false,
+    "conditionMode": "and",
+    "conditions": [],
+    "routes": [],
+    "choice": [
+      {
+        "label": "What kind of trouble?",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "goto",
+            "value": "3",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      },
+      {
+        "label": "Do you need help?",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "goto",
+            "value": "4",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      },
+      {
+        "label": "I should move on.",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "goto",
+            "value": "5",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      }
+    ],
+    "meta": {
+      "kind": "set",
+      "setName": "default_set",
+      "cnpcDialogId": 2,
+      "cnpcDialogTitle": "Roadside Watcher - Greeting"
+    },
+    "textFx": {
+      "image": [],
+      "sound": [],
+      "npc": []
+    }
+  }
+}

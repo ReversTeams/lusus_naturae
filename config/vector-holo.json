@@ -1,0 +1,10 @@
+{
+  "theme": "ice",
+  "camImageMode": "tex",
+  "camCols": 128,
+  "camRows": 72,
+  "camRowsPerTick": 4,
+  "camGridRev": 2,
+  "gearHolo": true,
+  "gearDetail": 6.0
+}

@@ -1,0 +1,38 @@
+{
+  "nodeName": "1",
+  "node": {
+    "type": "start",
+    "title": "Roadside Watcher - Start",
+    "text": "",
+    "textAlignment": "left",
+    "textTranslationKey": false,
+    "conditionMode": "and",
+    "conditions": [],
+    "routes": [
+      {
+        "mode": "and",
+        "conditions": [],
+        "goto": "2",
+        "linkMode": "internal"
+      }
+    ],
+    "choice": [],
+    "meta": {
+      "kind": "set",
+      "setName": "default_set",
+      "cnpcDialogId": 1,
+      "cnpcDialogTitle": "Roadside Watcher - Start"
+    },
+    "textFx": {
+      "image": [],
+      "sound": [],
+      "npc": []
+    }
+  },
+  "gui": {
+    "guiSource": "default",
+    "guiOffset": "default_dialogue_gui.json",
+    "guiJsonSubPath": "",
+    "guiJsonFileName": "default_dialogue_gui.json"
+  }
+}

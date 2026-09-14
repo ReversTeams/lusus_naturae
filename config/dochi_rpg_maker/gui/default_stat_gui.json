@@ -1,0 +1,83 @@
+{
+  "guiType": "stat_allocation",
+  "id": "default_stat_gui",
+  "layoutVersion": 4,
+  "designPreset": "standard",
+  "renderStyle": "sprite",
+  "spriteSheet": "dochi_rpg_maker:textures/gui/drm_ui_1.png",
+  "spriteLayout": "drm_v1",
+  "backgroundColor": "",
+  "backgroundOpacity": 0,
+  "backgroundColorNone": true,
+  "borderColor": "#4B5362",
+  "screenBackdropColor": "",
+  "screenBackdropColorNone": true,
+  "screenBackdropOpacity": 0,
+  "stage": {
+    "width": 960,
+    "height": 540,
+    "baseResolution": { "width": 960, "height": 540 },
+    "backgroundColor": "",
+    "backgroundColorNone": true,
+    "backgroundFrameNone": true,
+    "backgroundColorOpacity": 0,
+    "backgroundOverlayColor": "",
+    "backgroundOverlayColorNone": true,
+    "backgroundOverlayOpacity": 0,
+    "backgroundMaterial": "none",
+    "borderColor": "#4B5362",
+    "screenBackdropColor": "",
+    "screenBackdropColorNone": true,
+    "screenBackdropOpacity": 0,
+    "backgroundImage": "",
+    "backgroundImagePath": "",
+    "backgroundImageFit": "stretch",
+    "backgroundImageCrop": { "enabled": false, "x": 0, "y": 0, "w": 0, "h": 0 }
+  },
+  "elements": [
+    {
+      "id": "stat_header", "type": "stat_header", "x": 184, "y": 8, "width": 128, "height": 80,
+      "fillColor": "#18232F", "fillOpacity": 96, "borderColor": "#607D9F", "borderNone": false,
+      "textColor": "#F1F5F9", "subtextColor": "#AEB7C5", "accentColor": "#A7FF70",
+      "separatorColor": "#607D9F"
+    },
+    {
+      "id": "stat_list", "type": "stat_list", "x": 184, "y": 96, "width": 128, "height": 424,
+      "fillColor": "#121923", "fillOpacity": 96, "borderColor": "#556172", "borderNone": false,
+      "textColor": "#F1F5F9", "subtextColor": "#AEB7C5", "headingColor": "#8DB7FF",
+      "selectedColor": "#315A82", "hoverColor": "#243B54", "separatorColor": "#556172",
+      "headerHeight": 40, "contentPadding": 8, "rowHeight": 52, "rowGap": 4, "iconSize": 30,
+      "scrollbarWidth": 6, "scrollbarRightInset": 5, "scrollbarMinThumbHeight": 20,
+      "scrollbarTrackColor": "#111820", "scrollbarThumbColor": "#6FA8FF"
+    },
+    {
+      "id": "stat_column_divider", "type": "panel", "x": 336, "y": 96, "width": 128, "height": 80,
+      "fillColor": "#556172", "fillOpacity": 100, "borderNone": true
+    },
+    {
+      "id": "stat_points", "type": "stat_points", "x": 336, "y": 8, "width": 128, "height": 80,
+      "fillColor": "#18232F", "fillOpacity": 96, "borderColor": "#556172", "borderNone": false,
+      "textColor": "#F1F5F9", "subtextColor": "#AEB7C5", "accentColor": "#A7FF70",
+      "separatorColor": "#556172", "iconSize": 42
+    },
+    {
+      "id": "stat_description", "type": "stat_description", "x": 472, "y": 8, "width": 128, "height": 80,
+      "fillColor": "#141C26", "fillOpacity": 96, "borderColor": "#4B5362", "borderNone": false,
+      "textColor": "#CDD3DC", "headerColor": "#8DB7FF", "separatorColor": "#556172"
+    },
+    {
+      "id": "stat_action_divider", "type": "panel", "x": 472, "y": 96, "width": 128, "height": 80,
+      "fillColor": "#556172", "fillOpacity": 100, "borderNone": true
+    },
+    {
+      "id": "stat_increase", "type": "stat_increase_button", "x": 472, "y": 112, "width": 128, "height": 16,
+      "fillColor": "#315E48", "fillOpacity": 100, "hoverFillColor": "#43805F",
+      "borderColor": "#5F8370", "hoverBorderColor": "#83C7A0", "borderNone": false, "textColor": "#F2F4F7"
+    },
+    {
+      "id": "stat_close", "type": "stat_close_button", "x": 472, "y": 136, "width": 128, "height": 16,
+      "fillColor": "#343B45", "fillOpacity": 100, "hoverFillColor": "#4A535F",
+      "borderColor": "#677181", "hoverBorderColor": "#9DC5FF", "borderNone": false, "textColor": "#F2F4F7"
+    }
+  ]
+}

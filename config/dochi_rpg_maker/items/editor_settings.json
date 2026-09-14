@@ -1,0 +1,27 @@
+{
+  "format": "dochi_rpg_maker.item_editor_settings",
+  "version": 1,
+  "categories": [
+    { "id": "generic", "name": "Generic", "carrier": "generic" },
+    { "id": "weapon", "name": "Weapon", "carrier": "weapon" },
+    { "id": "helmet", "name": "Helmet", "carrier": "helmet" },
+    { "id": "chestplate", "name": "Chestplate", "carrier": "chestplate" },
+    { "id": "leggings", "name": "Leggings", "carrier": "leggings" },
+    { "id": "boots", "name": "Boots", "carrier": "boots" },
+    { "id": "consumable", "name": "Consumable", "carrier": "consumable" }
+  ],
+  "rarities": [
+    { "id": "common", "name": "Common", "color": "#D8DDE8" },
+    { "id": "uncommon", "name": "Uncommon", "color": "#7FE36A" },
+    { "id": "rare", "name": "Rare", "color": "#6FA8FF" },
+    { "id": "epic", "name": "Epic", "color": "#C879FF" }
+  ],
+  "tooltip": {
+    "showStats": true,
+    "sectionOrder": [ "requirements", "bonuses", "scaling", "attributes", "lore" ],
+    "requirementFormat": "{stat}: {required}",
+    "bonusFormat": "{stat}: +{amount}",
+    "scalingFormat": "{stat}: +{per_point} {attribute}/point",
+    "attributeFormat": "{attribute}: {amount}"
+  }
+}

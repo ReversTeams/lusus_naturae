@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 3,
+  "setId": "default_teleporter_set",
+  "displayName": "Default Teleporter",
+  "gui": "default_teleporter_gui.json",
+  "interactionConditions": {
+    "enabled": false,
+    "conditionMode": "and",
+    "conditions": []
+  },
+  "lockedPresentation": {
+    "mode": "dimmed"
+  },
+  "transition": {
+    "fadeOutTicks": 10,
+    "fadeInTicks": 10,
+    "departureSound": {
+      "id": "minecraft:block.portal.travel",
+      "volume": 1.0,
+      "pitch": 1.0
+    },
+    "arrivalSound": {
+      "id": "minecraft:block.portal.trigger",
+      "volume": 1.0,
+      "pitch": 1.0
+    }
+  },
+  "categories": [
+    {
+      "id": "towns",
+      "name": "Towns",
+      "nameTranslationKey": false,
+      "iconMedia": {
+        "mode": "image",
+        "image": "",
+        "imageFit": "contain",
+        "cropEnabled": false,
+        "cropX": 0,
+        "cropY": 0,
+        "cropW": 0,
+        "cropH": 0,
+        "sourceW": 0,
+        "sourceH": 0,
+        "itemId": "",
+        "itemCount": 1,
+        "itemSize": 32
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "id": "spawn",
+      "enabled": true,
+      "categoryId": "towns",
+      "name": "Spawn",
+      "nameTranslationKey": false,
+      "description": "Default teleporter destination",
+      "descriptionTranslationKey": false,
+      "descriptionAlignment": "left",
+      "descriptionStyles": [],
+      "iconMedia": {
+        "mode": "image",
+        "image": "",
+        "imageFit": "contain",
+        "cropEnabled": false,
+        "cropX": 0,
+        "cropY": 0,
+        "cropW": 0,
+        "cropH": 0,
+        "sourceW": 0,
+        "sourceH": 0,
+        "itemId": "",
+        "itemCount": 1,
+        "itemSize": 32
+      },
+      "target": {
+        "x": 0.5,
+        "y": 64.0,
+        "z": 0.5,
+        "yaw": 0.0,
+        "pitch": 0.0
+      },
+      "accessConditions": {
+        "enabled": false,
+        "conditionMode": "and",
+        "conditions": []
+      },
+      "commands": []
+    }
+  ]
+}

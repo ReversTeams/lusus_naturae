@@ -1,0 +1,62 @@
+
+[Messages]
+	#Gun noise warning message, displayed when half of the threshold is reached.
+	noiseWarningMsg = "&4This gun is too loud.."
+	#Whether to send the noise warning message in the chat or the action bar, true will send it to the chat and false will use the action bar
+	noiseWarningMessageInChat = false
+	#Message for when the horde is alerted by your gun's noise, sent when the threshold is reached.
+	hordeStartMsg = "&4The loud noise is attracting zombies.."
+	#Whether to send the horde start message in the chat or the action bar, true will send it to the chat and false will use the action bar
+	hordeStartMessageInChat = false
+
+[Zombie_Attraction]
+	#Choose which mobs to spawn when useHorde is off
+	mobs = ["minecraft:zombie"]
+	#Time window for noise (in seconds).
+	#Range: 0 ~ 9223372036854775807
+	timeLimit = 300
+	#Cooldown between each trigger (in seconds)
+	#Range: 0 ~ 9223372036854775807
+	cooldown = 50
+	#The radius of the area where zombies can hear your shots, moving out of that radius will reset your shots
+	#Range: 0.0 ~ 1.7976931348623157E308
+	hearingRadius = 50.0
+	#The radius around the player where zombies can spawn when useHorde is off.
+	#Range: 0.0 ~ 1.7976931348623157E308
+	spawnRadius = 60.0
+	#How many noise points are needed to trigger a horde.
+	#Each shot will add its gun's (if specified, else it defaults to 1) noise points.
+	#If "ignoreSilencer" is enabled, the silencer reduction (and if specified, any overrides) will apply
+	#Range: 1.0 ~ 1.7976931348623157E308
+	threshold = 60.0
+	#How many mobs to spawn when useHorde is off
+	#Range: > 1
+	spawnCount = 5
+	#HORDELESS MODE MAY HAVE ISSUES, PLEASE REPORT THEM
+	#Whether to start a horde or use the hordeless mode, useful for multiplayer servers and difficulty handling as the hordeless mode allows you to select the amount of entities
+	useHorde = false
+	#Sets the spawntable for the horde started by the mod. only if you're using the hordes. set it to empty to use the default, usage is hordes:name
+	hordeSpawnTable = ""
+	#Duration of the horde (in ticks) (only works with useHorde set to true)
+	#Range: > 1
+	hordeDuration = 2400
+
+[Gun]
+	#Define how many noise points count towards the threshold for an AmmoId or GunId.
+	#The GunId is checked first before the AmmoId. Any GunId/AmmoId not present here will default to 1 point
+	#Format: "namespace:id=points" (e.g. "tacz:50bmg=1")
+	gunPoints = ["tacz:50bmg=1"]
+	#How much a silencer reduces a shot's noise points, from 0% (no reduction) to 100% (no points count).
+	#Example: If an AKM shot gives 1 noise point and the modifier is 50%, 0.5 noise points will be added
+	#Range: 0 ~ 100
+	silencerModifier = 100
+	#Define the silence modifier for a specific silencer AttachmentId
+	#Must be a valid silencer's AttachmentId, otherwise it will not count even if it is a valid AttachmentId
+	silencerModifiers = ["tacz:muzzle_silencer_wraith=100"]
+	#List of TaCZ Gun IDs to ignore, e.g. tacz:ak47
+	excludedWeapons = []
+	#Whether to not count shots if the player is encased (Works by checking if you are under a solid block with no sky light.)
+	ignoreEncased = true
+	#Whether to apply any silencer modifiers.
+	ignoreSilencer = true
+

@@ -1,0 +1,46 @@
+
+["Dimension Control"]
+	#Disable Nether Portal functionality (entities won't be able to use them). Default is false.
+	disableNetherPortal = false
+	#Disable End Portal functionality (entities won't be able to use them). Default is false.
+	disableEndPortal = false
+
+["Tiered Mobs"]
+	#Enable tiered mob scaling based on distance from world spawn. Default is false.
+	tieringEnabled = false
+	#Distance before tiering starts, to make starting areas far less dangerous. Default is 500.
+	#Range: 1 ~ 1000
+	noTieringZoneRadius = 500
+	#Distance per tier. Default is 250.
+	#Range: 1 ~ 1000
+	distancePerTier = 250
+	#Health multiplier per tier. Default is 1.25 (25% increase per tier).
+	#Range: 0.0 ~ 10.0
+	healthMultiplierPerTier = 1.25
+	#Armor multiplier per tier. Default is 1.10 (10% increase per tier).
+	#Range: 0.0 ~ 10.0
+	armorMultiplierPerTier = 1.1
+	#Attack multiplier per tier. Default is 1.15 (15% increase per tier).
+	#Range: 0.0 ~ 10.0
+	attackMultiplierPerTier = 1.15
+	#Primary skill multiplier per tier. Default is 0.10 (10% increase per tier).
+	#Range: 0.0 ~ 10.0
+	primarySkillMultiplierPerTier = 1.1
+	#Secondary skill multiplier per tier. Default is 0.10 (10% increase per tier).
+	#Range: 0.0 ~ 10.0
+	secondarySkillMultiplierPerTier = 1.1
+	#Scaling mode for tier multipliers. Default is LOGARITHMIC. LOGARITHMIC provides diminishing returns, EXPONENTIAL provides increasing returns, and LINEAR provides consistent scaling.
+	#Allowed Values: LOGARITHMIC, EXPONENTIAL, LINEAR
+	scalingMode = "LOGARITHMIC"
+	#Base for logarithmic scaling (if LOGARITHMIC mode is selected). Default is 2.0.
+	#Range: 1.0 ~ 100.0
+	logBase = 5.0
+	#Enable tier jumping, for every x tiers, tiering will re-apply itself (additive), creating a staircase-like effect when graphed. Default is false.
+	tierJumpingEnabled = false
+	#Every x tiers, tiering will re-apply itself (additive), creating a staircase-like effect when graphed. Default is 10.
+	#Range: 1 ~ 100
+	tierJumpThreshold = 10
+	#Multiplier for tier jumping. Default is 0.5 (50% increase per jump).
+	#Range: 0.0 ~ 10.0
+	tierJumpMultiplier = 0.5
+

@@ -1,0 +1,22 @@
+{
+  "format": "dochi_rpg_maker.item_tooltip_template",
+  "version": 1,
+  "id": "classic_rpg",
+  "displayName": "Classic RPG",
+  "enabled": true,
+  "frame": {
+    "backgroundStart": "#F017202A",
+    "backgroundEnd": "#F017202A",
+    "borderStart": "#FF8DB7FF",
+    "borderEnd": "#FFA7FF70"
+  },
+  "components": [
+    { "type": "section", "source": "set" },
+    { "type": "divider", "color": "#80556172", "width": 0, "thickness": 1 },
+    { "type": "section", "source": "bonuses" },
+    { "type": "section", "source": "requirements" },
+    { "type": "section", "source": "scaling" },
+    { "type": "spacer", "height": 3 },
+    { "type": "section", "source": "lore" }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "gather_apples",
+  "title": "&eFirst Supplies",
+  "description": "&7Collect &a3 apples&7 for the journey.\n&bThis line demonstrates color, and &lthis text is bold&7.",
+  "descriptionAlignment": "left",
+  "startPolicy": "dialogue",
+  "completionMode": "turn_in",
+  "visibility": {
+    "mode": "after_dependencies",
+    "hideDetailsUntilActive": false
+  },
+  "prerequisites": {
+    "mode": "all",
+    "requiredState": "completed",
+    "conditionsEnabled": true,
+    "conditionMode": "and",
+    "quests": [],
+    "conditions": []
+  },
+  "objectives": {
+    "mode": "all",
+    "children": [
+      {
+        "id": "collect_apples",
+        "title": "&aGather Apples",
+        "type": "dochi_rpg_maker:item",
+        "item": "minecraft:apple",
+        "itemMode": "possession",
+        "required": 3
+      }
+    ]
+  },
+  "rewards": [
+    {
+      "id": "sample_xp",
+      "type": "dochi_rpg_maker:xp",
+      "amount": 50,
+      "mode": "points"
+    }
+  ],
+  "actions": {
+    "onTurnIn": []
+  },
+  "repeat": {
+    "mode": "never"
+  },
+  "turnIn": {
+    "consumeDeliveryObjectives": true
+  }
+}

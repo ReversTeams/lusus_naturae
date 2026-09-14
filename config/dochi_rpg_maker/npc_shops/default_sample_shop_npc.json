@@ -1,0 +1,104 @@
+{
+  "type": "npc_shop",
+  "schemaVersion": 2,
+  "id": "default_sample_shop_npc",
+  "title": "Roadside Quartermaster",
+  "currency": "minecraft:emerald",
+  "currencyItem": "minecraft:emerald",
+  "tradeMode": "buy_only",
+  "buyEnabled": true,
+  "sellEnabled": false,
+  "display": {
+    "itemDescription": true,
+    "itemSearchBar": true,
+    "itemListMode": "scroll"
+  },
+  "shopDefaultGui": {
+    "guiSource": "default",
+    "guiJsonFileName": "default_shop_gui.json",
+    "guiJsonPath": "default_shop_gui.json"
+  },
+  "shopGuis": {
+    "buy": {
+      "guiSource": "default",
+      "guiJsonFileName": "default_shop_gui.json",
+      "guiJsonPath": "default_shop_gui.json"
+    },
+    "sell": {
+      "guiSource": "default",
+      "guiJsonFileName": "default_shop_gui.json",
+      "guiJsonPath": "default_shop_gui.json"
+    }
+  },
+  "items": [
+    {
+      "productId": "lantern",
+      "item": "minecraft:lantern",
+      "count": 1,
+      "price": 6,
+      "stock": 8,
+      "maxStock": 8,
+      "restock": {
+        "enabled": true,
+        "amount": 8,
+        "intervalTicks": 24000,
+        "nextGameTime": 0
+      },
+      "description": "shop.sample.lantern.description",
+      "descriptionTranslationKey": true,
+      "action": "say The road is kinder when you carry your own light."
+    },
+    {
+      "productId": "bread",
+      "item": "minecraft:bread",
+      "count": 3,
+      "price": 4,
+      "stock": 12,
+      "maxStock": 12,
+      "restock": {
+        "enabled": true,
+        "amount": 12,
+        "intervalTicks": 24000,
+        "nextGameTime": 0
+      },
+      "description": "shop.sample.bread.description",
+      "descriptionTranslationKey": true,
+      "action": "say Three loaves. Enough to reach the next gate."
+    },
+    {
+      "productId": "iron_sword",
+      "item": "minecraft:iron_sword",
+      "count": 1,
+      "price": 28,
+      "stock": 2,
+      "maxStock": 2,
+      "restock": {
+        "enabled": true,
+        "amount": 2,
+        "intervalTicks": 24000,
+        "nextGameTime": 0
+      },
+      "description": "shop.sample.iron_sword.description",
+      "descriptionTranslationKey": true,
+      "action": "say Keep it sheathed until the road asks otherwise."
+    },
+    {
+      "productId": "arrows",
+      "item": "minecraft:arrow",
+      "count": 16,
+      "price": 10,
+      "stock": -1,
+      "maxStock": -1,
+      "restock": {
+        "enabled": false,
+        "amount": 0,
+        "intervalTicks": 0,
+        "nextGameTime": 0
+      },
+      "description": "shop.sample.arrow.description",
+      "descriptionTranslationKey": true,
+      "action": "say Count them before dusk."
+    }
+  ],
+  "sellItems": []
+}

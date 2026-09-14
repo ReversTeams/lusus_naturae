@@ -1,0 +1,86 @@
+{
+  "guiType": "popup",
+  "layoutVersion": 1,
+  "id": "default_popup_gui",
+  "renderStyle": "sprite",
+  "spriteSheet": "dochi_rpg_maker:textures/gui/drm_ui_1.png",
+  "spriteLayout": "drm_v1",
+  "defaultUiStyle": {
+    "enabled": true,
+    "fillColor": "#181D24",
+    "fillOpacity": 88,
+    "borderColor": "#8DB7FF"
+  },
+  "stage": {
+    "width": 960,
+    "height": 540,
+    "runtimeScalePercent": 100,
+    "baseResolution": { "width": 960, "height": 540 },
+    "backgroundColorNone": true,
+    "backgroundOverlayColorNone": true,
+    "backgroundImage": "",
+    "backgroundImagePath": "",
+    "placementMode": "grid",
+    "grid": { "width": 12, "height": 12 }
+  },
+  "elements": [
+    {
+      "id": "popup_panel",
+      "type": "panel",
+      "x": 270,
+      "y": 64,
+      "w": 420,
+      "h": 150,
+      "z": 1,
+      "anchor": "top_left",
+      "fillColor": "#181D24",
+      "fillOpacity": 88,
+      "fillNone": false,
+      "borderColor": "#8DB7FF",
+      "borderNone": false,
+      "enabled": true
+    },
+    {
+      "id": "popup_title",
+      "type": "popup_title",
+      "x": 294,
+      "y": 82,
+      "w": 372,
+      "h": 20,
+      "z": 2,
+      "anchor": "top_left",
+      "textColor": "#A7FF70",
+      "fillNone": true,
+      "borderNone": true,
+      "enabled": true
+    },
+    {
+      "id": "popup_subtitle",
+      "type": "popup_subtitle",
+      "x": 294,
+      "y": 108,
+      "w": 372,
+      "h": 16,
+      "z": 3,
+      "anchor": "top_left",
+      "textColor": "#8DB7FF",
+      "fillNone": true,
+      "borderNone": true,
+      "enabled": true
+    },
+    {
+      "id": "popup_text",
+      "type": "popup_text",
+      "x": 294,
+      "y": 134,
+      "w": 372,
+      "h": 52,
+      "z": 4,
+      "anchor": "top_left",
+      "textColor": "#E8EDF7",
+      "fillNone": true,
+      "borderNone": true,
+      "enabled": true
+    }
+  ]
+}

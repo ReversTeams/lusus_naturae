@@ -1,0 +1,70 @@
+
+#QShop 通用设置 / QShop common settings
+#这些设置在单人和服务端环境中都生效 / These settings apply to client and server environments.
+[server]
+
+	#交易提示消息 / Trade feedback messages
+	#这些选项只影响服务端行为 / These options affect server-side behavior.
+	[server.messages]
+		#是否显示交易提示消息(购买成功或失败时在聊天里弹出的消息)。
+		#Whether to show trade notification messages (messages popped in chat on purchase success or failure).
+		#默认 true / Default: true
+		showTradeMessages = true
+		#是否改为在物品栏上方(statsMessage/actionbar)区域显示交易提示,而不是聊天栏。
+		#Whether to show trade messages in the statsMessage area (above the hotbar) instead of the chat.
+		#开启后可防止聊天记录刷屏 / Enabling this prevents chat log spam.
+		#默认 false / Default: false
+		tradeMessagesInActionBar = false
+
+	#背包与购买设置 / Inventory and purchase settings
+	#允许超出背包容量时,无法放入背包的物品会掉落在玩家脚下。
+	#When overflow purchases are allowed, items that do not fit are dropped at the player's feet.
+	[server.inventory]
+		#是否允许玩家购买超过当前背包容量的物品。关闭时只要完整结果无法放入背包就拒绝交易。
+		#Whether players may buy more items than their current inventory can hold. When false, the trade is rejected if the complete result does not fit.
+		#默认 false / Default: false
+		allowOverflowPurchases = false
+
+	#死亡货币设置 / Currency-on-death settings
+	[server.death]
+		#玩家死亡时是否按下方规则减少货币。关闭时完整保留所有货币。
+		#Whether death applies the currency retention rules. When false, all currencies are kept.
+		#默认 false / Default: false
+		loseCurrencyOnDeath = false
+		#未单独配置的货币死亡后保留比例，范围 0.0~1.0。0.2 = 保留 20%。
+		#Retention for currencies without a rule, from 0.0 to 1.0. 0.2 keeps 20%.
+		#默认 0.0 / Default: 0.0
+		#Range: 0.0 ~ 1.0
+		defaultCurrencyRetention = 0.0
+		#按货币 id 覆盖保留比例，每项格式为 currencyId=比例，例如 coins=0.2。
+		#Per-currency retention overrides, one entry per line: currencyId=ratio, e.g. coins=0.2.
+		#也接受 currencyId:比例 / currencyId:ratio。未列出的货币使用 defaultCurrencyRetention。
+		currencyRetention = []
+
+#客户端界面设置 / Client GUI settings
+#这些选项也保存在 qshop-common.toml，以便客户端和服务端使用同一份配置。
+[client]
+	#是否显示子商店列表上下半透明渐隐遮罩。
+	#Whether to show the translucent fade masks on the tab list.
+	#默认 true / Default: true
+	showFadeMasks = true
+	#遮罩颜色(十六进制 RRGGBB,如 636363)。
+	#Fade mask color (hex RRGGBB, e.g. 636363).
+	#默认 636363 / Default: 636363
+	fadeColor = "636363"
+	#启用商店布局调试编辑器(F8)。默认关闭。
+	#Enable the shop layout debug editor (F8). Default: false.
+	enableLayoutDebug = false
+	#客户端上次选择的商店布局。可选 standard(7x3) 或 wide(8x4)。
+	#The last shop layout selected by the client. Use standard(7x3) or wide(8x4).
+	#默认 standard / Default: standard
+	lastLayout = "standard"
+	#是否在商店界面启用搜索框。会在重启游戏后恢复。
+	#Whether the shop search box is active. The state is restored after restarting the game.
+	#默认 false / Default: false
+	searchActive = false
+	#QShop 界面使用自身缩放值，并随 Minecraft GUI Scale 根据当前窗口动态调整可用范围。
+	#QShop uses its own local scale value and dynamically adjusts its usable range for the current window and Minecraft GUI Scale.
+	#默认偏好值 1.0 / Default preference: 1.0
+	guiScale = 1.0
+

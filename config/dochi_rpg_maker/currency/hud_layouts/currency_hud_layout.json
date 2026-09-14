@@ -1,0 +1,35 @@
+{
+  "hudX": 8,
+  "hudY": 8,
+  "hudScale": 1.0,
+  "hudAlpha": 1.0,
+  "hudVisible": false,
+  "layout": {
+    "guiType": "currency_hud",
+    "designPreset": "standard",
+    "renderStyle": "sprite",
+    "spriteSheet": "dochi_rpg_maker:textures/gui/drm_ui_1.png",
+    "spriteLayout": "drm_v1",
+    "id": "currency_hud_layout",
+    "defaultUiStyle": {
+      "enabled": true,
+      "fillColor": "#1F2228",
+      "fillNone": false,
+      "fillOpacity": 74,
+      "borderColor": "#3A3F4A",
+      "borderNone": false,
+      "outlineGlow": 20
+    },
+    "stage": {
+      "width": 960,
+      "height": 540,
+      "backgroundColorNone": true,
+      "backgroundOverlayOpacity": 0,
+      "grid": {
+        "width": 8,
+        "height": 8
+      }
+    },
+    "elements": []
+  }
+}

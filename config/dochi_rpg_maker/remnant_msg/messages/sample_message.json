@@ -1,0 +1,19 @@
+{
+  "type": "remnant_msg",
+  "id": "sample_message",
+  "name": "Sample Remnant Message",
+  "enabled": true,
+  "message": "",
+  "messageAlignment": "left",
+  "messageStyles": [],
+  "useConditionsEnabled": false,
+  "useConditionMode": "and",
+  "useConditions": [],
+  "messageConditionsEnabled": false,
+  "messageConditionMode": "and",
+  "messageConditions": [],
+  "messageActionsEnabled": false,
+  "messageTrigger": "every_view",
+  "messageActions": [],
+  "gui": "default_remnant_msg_gui.json"
+}

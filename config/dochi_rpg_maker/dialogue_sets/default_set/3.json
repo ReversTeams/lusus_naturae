@@ -1,0 +1,54 @@
+{
+  "nodeName": "3",
+  "node": {
+    "type": "general",
+    "title": "Roadside Watcher - Rumor",
+    "text": "Last night a blue lantern vanished near the old shrine. Take this spare lantern; if its flame bends toward the trees, follow it slowly.",
+    "textAlignment": "left",
+    "textTranslationKey": false,
+    "conditionMode": "and",
+    "conditions": [],
+    "routes": [],
+    "choice": [
+      {
+        "label": "Tell me about the shrine.",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "goto",
+            "value": "4",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      },
+      {
+        "label": "That is enough for now.",
+        "labelTranslationKey": false,
+        "actions": [
+          {
+            "type": "goto",
+            "value": "5",
+            "linkMode": "internal"
+          }
+        ],
+        "fx": null,
+        "conditionMode": "and",
+        "conditions": []
+      }
+    ],
+    "meta": {
+      "kind": "set",
+      "setName": "default_set",
+      "cnpcDialogId": 3,
+      "cnpcDialogTitle": "Roadside Watcher - Rumor"
+    },
+    "textFx": {
+      "image": [],
+      "sound": [],
+      "npc": []
+    }
+  }
+}

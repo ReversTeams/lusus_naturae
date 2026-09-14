@@ -1,0 +1,32 @@
+{
+  "format": "dochi_rpg_maker.item_definition",
+  "version": 1,
+  "id": "training_sword",
+  "displayName": "Training Sword",
+  "displayNameTranslationKey": false,
+  "templateItem": "minecraft:iron_sword",
+  "carrier": "weapon",
+  "category": "weapon",
+  "statSet": "default_stats",
+  "setId": "training_set",
+  "enabled": true,
+  "maxStackSize": 1,
+  "rarity": "common",
+  "foil": false,
+  "tooltip": { "showStats": true, "templateId": "default_tooltip" },
+  "lore": [
+    { "text": "A DRM database item example.", "translationKey": false }
+  ],
+  "requirements": [
+    { "stat": "strength", "minimum": 5 }
+  ],
+  "statBonuses": [],
+  "attributeModifiers": [
+    { "attribute": "minecraft:generic.attack_damage", "amount": 4.0, "operation": "add", "slot": "mainhand" },
+    { "attribute": "minecraft:generic.attack_speed", "amount": -2.4, "operation": "add", "slot": "mainhand" }
+  ],
+  "scaling": [
+    { "stat": "strength", "attribute": "minecraft:generic.attack_damage", "perPoint": 0.15, "operation": "add", "slot": "mainhand" }
+  ],
+  "durability": { "max": 250, "unbreakable": false }
+}

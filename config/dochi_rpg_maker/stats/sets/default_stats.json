@@ -1,0 +1,68 @@
+{
+  "format": "dochi_rpg_maker.stat_set",
+  "version": 1,
+  "id": "default_stats",
+  "name": "Default Stats",
+  "enabled": true,
+  "gui": "default_stat_gui.json",
+  "stats": [
+    {
+      "id": "strength",
+      "name": "Strength",
+      "nameTranslationKey": false,
+      "description": "Physical power used by equipment requirements and scaling.",
+      "descriptionTranslationKey": false,
+      "iconItem": "minecraft:iron_sword",
+      "enabled": true,
+      "min": 0,
+      "max": 99,
+      "default": 0,
+      "cost": { "provider": "experience", "currencyId": "", "itemId": "", "base": 1, "step": 0, "multiplier": 1.0 },
+      "effects": []
+    },
+    {
+      "id": "dexterity",
+      "name": "Dexterity",
+      "nameTranslationKey": false,
+      "description": "Agility stat available for item requirements and scaling.",
+      "descriptionTranslationKey": false,
+      "iconItem": "minecraft:bow",
+      "enabled": true,
+      "min": 0,
+      "max": 99,
+      "default": 0,
+      "cost": { "provider": "experience", "currencyId": "", "itemId": "", "base": 1, "step": 0, "multiplier": 1.0 },
+      "effects": []
+    },
+    {
+      "id": "vitality",
+      "name": "Vitality",
+      "nameTranslationKey": false,
+      "description": "Each point grants two maximum health.",
+      "descriptionTranslationKey": false,
+      "iconItem": "minecraft:golden_apple",
+      "enabled": true,
+      "min": 0,
+      "max": 99,
+      "default": 0,
+      "cost": { "provider": "experience", "currencyId": "", "itemId": "", "base": 1, "step": 0, "multiplier": 1.0 },
+      "effects": [
+        { "type": "attribute", "attribute": "minecraft:generic.max_health", "operation": "add", "base": 0.0, "perPoint": 2.0 }
+      ]
+    },
+    {
+      "id": "endurance",
+      "name": "Endurance",
+      "nameTranslationKey": false,
+      "description": "Endurance stat available for equipment requirements and scaling.",
+      "descriptionTranslationKey": false,
+      "iconItem": "minecraft:leather_boots",
+      "enabled": true,
+      "min": 0,
+      "max": 99,
+      "default": 0,
+      "cost": { "provider": "experience", "currencyId": "", "itemId": "", "base": 1, "step": 0, "multiplier": 1.0 },
+      "effects": []
+    }
+  ]
+}

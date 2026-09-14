@@ -1,0 +1,39 @@
+
+["Config for [CS] Augmentations"]
+	#Do Cybernetics Drop on Death? (default: true)
+	dropCybernetics = true
+	#Should Cyberpsychosis be active? (default: true)
+	togglePsychosis = true
+	#Should Organ Rejection be active? (default: true)
+	toggleRejection = true
+	#Minimum interval for cyberpsychosis events in ticks (default: 4800)
+	#Range: 0 ~ 9223372036854775807
+	cyberpsychosisMinInterval = 4800
+	#Maximum interval for cyberpsychosis events in ticks (default: 168000)
+	#Range: 0 ~ 9223372036854775807
+	cyberpsychosisMaxInterval = 168000
+	#Interval in ticks for increasing cyberpsychosis severity (default: 1200)
+	#Range: 0 ~ 9223372036854775807
+	cyberpsychosisSeverityIncreaseInterval = 1200
+	#The severity level threshold for villagers refusing to trade (default: 70)
+	#Range: 0 ~ 100
+	cyberpsychosisTradingThreshold = 70
+	#Cooldown in ticks for villagers refusing to trade due to cyberpsychosis (default: 6000)
+	#Range: 0 ~ 9223372036854775807
+	cyberpsychosisTradeRefuseCooldown = 6000
+	#Reduction in cyberpsychosis severity when sleeping (default: 10)
+	#Range: > 0
+	cyberpsychosisSeverityReductionOnSleep = 10
+	#Chance for cyberpsychosis sound event (default: 0.2)
+	#Range: 0.0 ~ 1.0
+	cyberpsychosisSoundChance = 0.2
+	#Chance for cyberpsychosis action bar event (default: 0.4)
+	#Range: 0.0 ~ 1.0
+	cyberpsychosisActionBarChance = 0.4
+	#Chance for cyberpsychosis chat message event (default: 0.3)
+	#Range: 0.0 ~ 1.0
+	cyberpsychosisChatChance = 0.3
+	#Chance for cyberpsychosis pet death event (default: 0.05)
+	#Range: 0.0 ~ 1.0
+	cyberpsychosisPetDeathChance = 0.05
+

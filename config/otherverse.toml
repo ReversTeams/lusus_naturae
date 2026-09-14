@@ -1,0 +1,31 @@
+
+["Pact Magic Settings"]
+	#A list of mob IDs that cannot be bound.
+	unbindable_mobs = []
+	#If enabled, ghasts and creepers may spawn during the demesnes ritual.
+	demesnes_mob_griefing = true
+	#Maximum number of Demesne perks that can be chosen.
+	demesnes_perk_count = 10
+	#Demesne perks in this list will be disabled (but will not block progress in the perk tree). Format them as they appear in the perk tree, e.g. "Mandatory Hospitality".
+	skipped_perks = []
+	#Can the player re-do the three big rituals? If enabled, re-doing a ritual will cost 1/3 of your Self and severely lower your spiritual affinity across the board, slowing down your diagrams until you recover.
+	can_redo_rituals = false
+	#Base multiplier of a mob's max health required to bind it.
+	binding_cost = 3.0
+	#Hostile mobs with more than this much max HP will attack their bindings.
+	binding_attack_cutoff_hostile = 20.0
+	#ALL mobs with more than this much max HP will attack their bindings.
+	binding_attack_cutoff_any = 100.0
+	#Total amount of Self. Self doesn't change with max HP; e.g. if you had the default 10 total Self but 20 hearts of HP, you would lose 2 hearts by spending 1 Self  .
+	total_self = 10
+	#Self recovered by sleeping.
+	daily_self = 3
+	#Self recovered from an advancement.
+	advancement_self = 10
+	#Can earth shrines / diagrams break bedrock?
+	bedrock_removal = true
+	#Prime materials for each dimension. If there are multiple entries for the same dimension, any of them will work.
+	dimensional_primes = ["minecraft:overworld=otherverse:salt", "minecraft:the_nether=otherverse:sulfur", "minecraft:the_end=otherverse:quicksilver", "default=otherverse:cinnabar"]
+	#If this list is not empty, at least one of these items must be in your inventory for you to use the Sight.
+	sight_items = []
+

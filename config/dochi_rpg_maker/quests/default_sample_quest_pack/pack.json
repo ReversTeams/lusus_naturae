@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "default_sample_quest_pack",
+  "enabled": false,
+  "title": "&bDRM Sample Quest Pack",
+  "description": "&7A ready-to-edit sample demonstrating &bcolor &7and &lformatting&7 codes.",
+  "descriptionAlignment": "left",
+  "chapters": [
+    {
+      "id": "getting_started",
+      "title": "&eGetting Started",
+      "order": 100,
+      "quests": [
+        "gather_apples"
+      ]
+    }
+  ],
+  "questIndex": {
+    "gather_apples": {
+      "file": "quests/gather_apples.json",
+      "dependencies": [],
+      "chapter": "getting_started",
+      "x": 24,
+      "y": 28
+    }
+  }
+}

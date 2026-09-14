@@ -1,0 +1,90 @@
+{
+  "id": "dochi_rpg_maker:custom_air_bar",
+  "name": "Custom Air Bar",
+  "mode": "VANILLA_REPLACEMENT",
+  "replaceVanilla": "AIR",
+  "version": 1,
+  "enabled": false,
+  "elements": [
+    {
+      "id": "air_group",
+      "type": "GROUP",
+      "binding": {
+        "type": "VANILLA_AIR",
+        "field": "ratio"
+      },
+      "visibility": {
+        "mode": "WHILE_LOW_VALUE",
+        "threshold": 0.99
+      },
+      "transform": {
+        "anchor": "BOTTOM_LEFT",
+        "x": 20,
+        "y": -138,
+        "width": 220,
+        "height": 22,
+        "scale": 1.0,
+        "rotation": 0.0,
+        "zIndex": 10
+      },
+      "children": [
+        {
+          "id": "air_fill",
+          "type": "BAR",
+          "binding": {
+            "type": "VANILLA_AIR",
+            "field": "ratio"
+          },
+          "renderer": {
+            "type": "BAR",
+            "skin": "DRM_GAUGE",
+            "fillMode": "HORIZONTAL_LEFT_TO_RIGHT",
+            "backgroundColor": "#CC111820",
+            "fillColor": "#FF7EE7FF",
+            "frameColor": "#00000000",
+            "lossColor": "#FFFFD45C",
+            "lossDelayTicks": 4,
+            "lossDurationTicks": 10
+          },
+          "animation": {
+            "type": "SMOOTH_VALUE_LERP",
+            "durationTicks": 8
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 0,
+            "width": 160,
+            "height": 14,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 1
+          }
+        },
+        {
+          "id": "air_text",
+          "type": "TEXT",
+          "binding": {
+            "type": "VANILLA_AIR",
+            "format": "{current}/{max}"
+          },
+          "renderer": {
+            "color": "#E8FCFF",
+            "shadow": true,
+            "align": "CENTER"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 2,
+            "width": 160,
+            "height": 10,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 2
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "type": "reload_policy",
+  "version": 1,
+  "reloadOnTrigger": true,
+  "manualReloadCommand": true
+}

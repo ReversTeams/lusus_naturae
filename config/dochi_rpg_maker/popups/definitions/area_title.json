@@ -1,0 +1,33 @@
+{
+  "type": "popup_definition",
+  "version": 6,
+  "id": "area_title",
+  "name": "Area Title",
+  "enabled": true,
+  "gui": "default_popup_gui.json",
+  "channel": "title",
+  "priority": 100,
+  "conflict": "replace",
+  "instanceKey": "area_title",
+  "content": {
+    "title": "Area Discovered",
+    "subtitle": "",
+    "text": "A new region has been discovered.",
+    "titleAlignment": "center",
+    "subtitleAlignment": "left",
+    "textAlignment": "left",
+    "titleStyles": [],
+    "subtitleStyles": [],
+    "textStyles": []
+  },
+  "timeline": {
+    "fadeInTicks": 10,
+    "holdTicks": 80,
+    "fadeOutTicks": 20
+  },
+  "sound": {
+    "id": "",
+    "volume": 1.0,
+    "pitch": 1.0
+  }
+}

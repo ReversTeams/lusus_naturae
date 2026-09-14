@@ -1,0 +1,82 @@
+{
+  "id": "dochi_rpg_maker:custom_food_bar",
+  "name": "Custom Food Bar",
+  "mode": "VANILLA_REPLACEMENT",
+  "replaceVanilla": "FOOD",
+  "version": 1,
+  "enabled": false,
+  "elements": [
+    {
+      "id": "food_group",
+      "type": "GROUP",
+      "transform": {
+        "anchor": "BOTTOM_LEFT",
+        "x": 20,
+        "y": -112,
+        "width": 220,
+        "height": 24,
+        "scale": 1.0,
+        "rotation": 0.0,
+        "zIndex": 10
+      },
+      "children": [
+        {
+          "id": "food_fill",
+          "type": "BAR",
+          "binding": {
+            "type": "VANILLA_FOOD",
+            "field": "ratio"
+          },
+          "renderer": {
+            "type": "BAR",
+            "skin": "DRM_GAUGE",
+            "fillMode": "HORIZONTAL_LEFT_TO_RIGHT",
+            "backgroundColor": "#CC111820",
+            "fillColor": "#FFFFB45C",
+            "frameColor": "#00000000",
+            "lossColor": "#FFFFD45C",
+            "lossDelayTicks": 4,
+            "lossDurationTicks": 10
+          },
+          "animation": {
+            "type": "SMOOTH_VALUE_LERP",
+            "durationTicks": 8
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 0,
+            "width": 160,
+            "height": 14,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 1
+          }
+        },
+        {
+          "id": "food_text",
+          "type": "TEXT",
+          "binding": {
+            "type": "VANILLA_FOOD",
+            "format": "{current}/{max}"
+          },
+          "renderer": {
+            "color": "#FFFFFF",
+            "shadow": true,
+            "align": "CENTER"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 2,
+            "width": 160,
+            "height": 10,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 2
+          }
+        }
+      ]
+    }
+  ]
+}

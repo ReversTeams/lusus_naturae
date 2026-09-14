@@ -1,0 +1,269 @@
+
+#Default values for NPCs that do not override settings in the in-game GUI or scripts.
+[defaults]
+	#Default bridge enable flag. Scripts can override with setEnabled or tacznpcfire.enabled.
+	enabled = true
+	#Default reload behavior. Scripts can override per NPC with setReload or tacznpcfire.reload.
+	reload = true
+	#If true, non-CustomNPC managed mobs may keep vanilla movement while firing.
+	#CustomNPCs ranged combat always suppresses native approach AI; tactical movement is owned by this bridge.
+	#Bridge methods and per-NPC persistent settings can override tacznpcfire.moveWhileFiring.
+	moveWhileFiring = false
+	#Fixed CustomNPCs walking speed while move-while-firing is active.
+	#0 keeps the NPC's current walking speed. Positive values set that exact CustomNPCs walking speed.
+	#Bridge methods and per-NPC persistent settings can override tacznpcfire.moveFireWalkSpeed.
+	#Range: 0.0 ~ 64.0
+	moveFireWalkSpeed = 5.0
+	#Legacy CustomNPCs tactical ranged movement mode.
+	#Kept for old NPC data and scripts. New NPCs should prefer allySpacing + engagementMode.
+	#0 hold, 1 spread, 2 compact, 3 advance, 4 retreat.
+	#Range: 0 ~ 4
+	tacticalMode = 1
+	#Default blocks TACZ Fire NPCs try to keep between allied NPCs while fighting.
+	#0 disables squad spacing. Positive values push nearby managed NPCs apart.
+	#Range: 0.0 ~ 16.0
+	allySpacing = 3.0
+	#Default target distance behavior.
+	#0 = hold: do not reposition just because of target distance.
+	#1 = advance: approach until approachDistance.
+	#2 = retreat: back away until retreatDistance.
+	#Range: 0 ~ 2
+	engagementMode = 0
+	#Default target distance where advance movement stops.
+	#Range: 0.5 ~ 64.0
+	approachDistance = 8.0
+	#Default target distance that retreat movement tries to open to.
+	#Range: 1.0 ~ 128.0
+	retreatDistance = 16.0
+	#Maximum blocks for one CustomNPCs tactical strafe/reposition step.
+	#Lower values make NPCs wiggle in shorter intervals; higher values make wider side steps.
+	#Bridge methods and per-NPC persistent settings can override tacznpcfire.tacticalMoveStep.
+	#Range: 0.5 ~ 8.0
+	tacticalMoveStep = 3.25
+	#Fixed CustomNPCs walking speed used only while a tactical reposition step is active.
+	#0 falls back to moveFireWalkSpeed/defaultWalkSpeed. Positive values set the tactical step speed.
+	#Bridge methods and per-NPC persistent settings can override tacznpcfire.tacticalStepSpeed.
+	#Range: 0.0 ~ 64.0
+	tacticalStepSpeed = 5.0
+	#If true, CustomNPCs On Found Enemy: Retreat may keep TACZ ranged fire active while retreat movement continues.
+	#If false, Retreat is treated like non-combat idle for this bridge: managed weapons are put away and CustomNPCs retreat AI is left alone.
+	#Bridge methods and per-NPC persistent settings can override tacznpcfire.retreatFire.
+	retreatFire = false
+	#Fixed CustomNPCs walking speed while retreat-fire is active.
+	#0 keeps the NPC's current retreat speed. Positive values set that exact CustomNPCs walking speed.
+	#Bridge methods and per-NPC persistent settings can override tacznpcfire.retreatFireWalkSpeed.
+	#Range: 0.0 ~ 64.0
+	retreatFireWalkSpeed = 5.0
+	#Default NPC stance.
+	#0 = idle: stop bridge combat and put away managed weapons.
+	#1 = ranged: hold/use TACZ ranged weapon only.
+	#2 = melee: hold/use stored melee weapon only.
+	#3 = auto: ranged/melee auto swap, visible ranged idle.
+	#4 = auto hidden idle: ranged/melee auto swap during combat, empty hands outside combat.
+	#Bridge methods and per-NPC persistent settings use tacznpcfire.stance.
+	#Range: 0 ~ 4
+	stance = 3
+	#Legacy NPC RPM multiplier kept for old configs.
+	#The bridge now ignores this value and uses the TACZ gun RPM unless rpm or rpmMin/rpmMax is set.
+	#Use the fixed rpm option for an explicit firing speed.
+	#Range: 0.0 ~ 8.0
+	rpmMultiplier = 1.0
+	#Default fixed target RPM.
+	#0 means use the TACZ gun's own RPM.
+	#Positive values make the bridge attempt that RPM for NPC shots.
+	#Range: 0 ~ 7200
+	rpm = 0
+	#Default random RPM minimum.
+	#If rpmMin or rpmMax is positive, the bridge picks a random target RPM after each shot.
+	#Use 0 with rpmMax to mean 1 as the minimum.
+	#Range: 0 ~ 7200
+	rpmMin = 0
+	#Default random RPM maximum.
+	#0 disables random RPM range unless rpmMin is also configured.
+	#When random range is active it overrides fixed rpm.
+	#Range: 0 ~ 7200
+	rpmMax = 0
+	#Default NPC ranged accuracy, as percent.
+	#100 means no extra aim error. Lower values add random yaw/pitch error before each TACZ shot.
+	#Range: 0.0 ~ 100.0
+	accuracy = 100.0
+	#Default max firing distance in blocks. Scripts can override per NPC.
+	#Range: 1.0 ~ 256.0
+	maxDistance = 64.0
+	#Default enemy detection distance in blocks. This controls target acquisition, not firing range.
+	#Range: 1.0 ~ 256.0
+	detectDistance = 64.0
+	#Default milliseconds an NPC watches a detected enemy before switching to confirmed combat.
+	#Range: 0 ~ 10000
+	detectToCombatMs = 650
+	#Default front cone angle where a detected enemy immediately becomes a combat target.
+	#Range: 0.0 ~ 360.0
+	instantCombatAngleDegrees = 25.0
+	#Default close-range detection override.
+	#When true, targets inside closeDetectionDistance bypass the horizontal detection angle.
+	#Disable this per NPC for stealth/backstab concepts.
+	closeDetectionEnabled = true
+	#Default close-range detection distance in blocks. Preserves the old hardcoded 2.5 block behavior.
+	#Range: 0.0 ~ 32.0
+	closeDetectionDistance = 2.5
+	#Default distance in blocks where auto stance switches from TACZ ranged fire to melee.
+	#Range: 0.5 ~ 32.0
+	meleeSwitchRange = 4.0
+	#Default melee damage mode.
+	#0 = weapon spec, using the held melee item's vanilla attack damage attribute.
+	#1 = custom fixed damage.
+	#Range: 0 ~ 1
+	meleeDamageMode = 0
+	#Default custom melee damage used when meleeDamageMode is 1.
+	#Range: 0.0 ~ 4096.0
+	meleeCustomDamage = 5.0
+	#Default melee knockback mode.
+	#0 = weapon spec, using the held melee item's vanilla attack knockback attribute.
+	#1 = custom fixed knockback strength.
+	#Range: 0 ~ 1
+	meleeKnockbackMode = 0
+	#Default custom melee knockback strength used when meleeKnockbackMode is 1.
+	#Range: 0.0 ~ 16.0
+	meleeCustomKnockback = 0.4
+	#Default melee attack speed mode.
+	#0 = weapon spec, using the held melee item's vanilla attack speed attribute.
+	#1 = custom fixed attacks per second.
+	#Range: 0 ~ 1
+	meleeAttackSpeedMode = 0
+	#Default custom melee attacks per second used when meleeAttackSpeedMode is 1.
+	#Range: 0.1 ~ 20.0
+	meleeCustomAttackSpeed = 1.2
+	#Enable Better Combat-compatible melee playback when Better Combat is installed.
+	#When enabled, melee attack speed follows the held item's effective attack speed attribute.
+	#Mob Player Animator remains optional; clients without it use a vanilla swing.
+	betterCombatCompatibility = true
+	#Default ranged damage mode.
+	#0 = TACZ gun/bullet spec.
+	#1 = custom fixed damage for managed NPC TACZ bullet hits.
+	#Range: 0 ~ 1
+	rangedDamageMode = 0
+	#Default custom ranged damage used when rangedDamageMode is 1.
+	#Range: 0.0 ~ 4096.0
+	rangedCustomDamage = 5.0
+	#Default grenade throwing enable flag. Per-NPC GUI settings can override it.
+	grenadeEnabled = false
+	#Default LRTactical ThrowableId written to the thrown item stack.
+	grenadeThrowableId = "lrtactical:m67"
+	#Default item id used to build the LRTactical throwable ItemStack.
+	grenadeItemId = "lrtactical:throwable"
+	#Default minimum distance, in blocks, where the NPC may throw a grenade.
+	#Range: 0.0 ~ 128.0
+	grenadeMinRange = 5.0
+	#Default maximum distance, in blocks, where the NPC may throw a grenade.
+	#Range: 0.0 ~ 256.0
+	grenadeMaxRange = 20.0
+	#Default nearby-entity search radius around the target. A crowded target can trigger a throw.
+	#Range: 0.0 ~ 64.0
+	grenadeSearchRange = 5.0
+	#Default NPC health ratio that can trigger a grenade throw. 0 disables the low-health trigger.
+	#Range: 0.0 ~ 1.0
+	grenadeHpRatio = 0.5
+	#Default grenade throw cooldown in game ticks.
+	#Range: 0 ~ 72000
+	grenadeCooldownTicks = 200
+	#Default grenade fuse in game ticks, passed to the LRTactical grenade entity constructor.
+	#Range: 1 ~ 7200
+	grenadeFuseTicks = 100
+	#Default direct explosion damage for damaging LRTactical grenades.
+	#Range: 0.0 ~ 4096.0
+	grenadeDamage = 18.0
+	#Default base grenade throw power.
+	#Range: 0.1 ~ 4.0
+	grenadePower = 1.1
+	#Default grenade throw angle in degrees.
+	#Range: 5.0 ~ 85.0
+	grenadeAngle = 65.0
+	#Default NPC ammo supply behavior.
+	#If true, the bridge refills any TACZ gun held by the NPC from NPC ammoStock after a reload delay.
+	#This uses only the GUI/persistent ammo policy; it does not search NPC inventory for ammo items.
+	supplyNpcAmmo = true
+	#Default NPC spare ammo stock.
+	#-1 means infinite stock. 0 means no spare ammo. Positive values are finite spare rounds.
+	#The bridge consumes this data when reloads complete.
+	#Range: -1 ~ 999999
+	ammoStock = -1
+	#Default max spare ammo for regen. -1 means uncapped.
+	#Range: -1 ~ 999999
+	ammoStockMax = -1
+	#Default rounds restored every ammoRegenIntervalMs. 0 disables regen.
+	#Range: 0 ~ 999999
+	ammoRegenAmount = 0
+	#Default ammo regen interval in milliseconds. 0 disables regen.
+	#Range: 0 ~ 86400000
+	ammoRegenIntervalMs = 0
+	#If true, an NPC that ended combat after entering ammo-exhaustion fallback receives one full magazine after the configured target-loss delay.
+	#The target must remain absent. Reacquiring a target cancels the pending recovery.
+	#This uses the bridge ammo state and TACZ reload; it never creates physical ammo or magazine items.
+	ammoExhaustionRecoveryEnabled = false
+	#Milliseconds after target loss before ammo-exhaustion recovery starts. The reload duration is additional.
+	#Range: 0 ~ 600000
+	ammoExhaustionRecoveryDelayMs = 10000
+	#Default CustomNPCs walking speed multiplier only while the bridge reloads NPC ammo.
+	#1.0 keeps original speed during reload. 0 stops movement while reloading. Scripts can override per NPC.
+	#This is never applied while simply firing.
+	#Range: 0.0 ~ 8.0
+	reloadWalkSpeedMultiplier = 0.0
+	#Default reload type.
+	#0 = normal reload when the gun is empty.
+	#1 = force reload after forceReloadShots successful trigger pulls.
+	#2 = force reload after a random threshold between forceReloadMinShots and forceReloadMaxShots.
+	#Range: 0 ~ 2
+	reloadType = 0
+	#Default fixed successful trigger pulls before force reload when reloadType is 1.
+	#Range: 1 ~ 9999
+	forceReloadShots = 30
+	#Default minimum successful trigger pulls before force reload when reloadType is 2.
+	#Range: 1 ~ 9999
+	forceReloadMinShots = 30
+	#Default maximum successful trigger pulls before force reload when reloadType is 2.
+	#Range: 1 ~ 9999
+	forceReloadMaxShots = 50
+	#Legacy ignored setting.
+	#NPCs must hold a real TACZ gun in the main hand; the bridge no longer creates virtual guns.
+	#Range: 0 ~ 5000
+	virtualGunHoldMs = 0
+
+#Experimental combat behaviors. These settings may change after field testing.
+#Reload cover uses only normal NPC navigation and TACZ's existing reload state/animation.
+[experimentalCover]
+	#Make ranged CustomNPCs seek solid high cover while a bridge-managed reload is active.
+	#After reloading, the NPC moves to a nearby peek point with line of sight before resuming fire.
+	enabled = true
+	#Maximum horizontal cover search radius in blocks. Search work is capped internally.
+	#Range: 3 ~ 12
+	searchRadius = 8
+	#Default CustomNPCs walking speed used only while moving into, out of, or back to cover.
+	#Each NPC can override this value in the cover settings GUI.
+	#Range: 0.5 ~ 64.0
+	moveSpeed = 5.0
+
+#Timing knobs for reload retry.
+[timing]
+	#Minimum milliseconds between TACZ reload() attempts after NO_AMMO.
+	#Range: 50 ~ 10000
+	reloadRetryMs = 700
+	#Minimum milliseconds between TACZ bolt/pump attempts after NEED_BOLT.
+	#Range: 0 ~ 5000
+	boltRetryMs = 120
+	#Milliseconds the bridge waits before completing NPC reload when supplyNpcAmmo is enabled.
+	#Set 0 to use the held TACZ gun's own reload cooldown from gun data.
+	#Range: 0 ~ 30000
+	npcReloadDurationMs = 0
+	#Fallback magazine size if TACZ gun resource data cannot be read.
+	#Range: 1 ~ 999
+	fallbackMagazineSize = 30
+
+#Server-authoritative gun feedback settings.
+#These settings do not reduce PointBlank damage frequency.
+[guns]
+	#Minimum ticks between player knockback impulses from DW-managed PointBlank hitscan damage.
+	#0 preserves immediate knockback for every successful hit.
+	#Values from 1 to 50 keep rapid damage but suppress repeated knockback inside the interval.
+	#Range: 0 ~ 50
+	pointBlankKnockbackIntervalTicks = 10
+

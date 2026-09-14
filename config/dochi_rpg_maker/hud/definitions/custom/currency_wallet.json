@@ -1,0 +1,122 @@
+{
+  "id": "dochi_rpg_maker:currency_wallet",
+  "name": "Currency Wallet Overlay",
+  "mode": "CUSTOM_OVERLAY",
+  "version": 1,
+  "enabled": false,
+  "elements": [
+    {
+      "id": "currency_wallet_group",
+      "type": "GROUP",
+      "binding": {
+        "type": "DRM_CURRENCY",
+        "field": "ratio"
+      },
+      "visibility": {
+        "mode": "WHILE_HIGH_VALUE",
+        "threshold": 0.01
+      },
+      "transform": {
+        "anchor": "TOP_RIGHT",
+        "x": -188,
+        "y": 18,
+        "width": 168,
+        "height": 34,
+        "scale": 1.0,
+        "rotation": 0.0,
+        "zIndex": 20
+      },
+      "children": [
+        {
+          "id": "currency_wallet_background",
+          "type": "IMAGE",
+          "renderer": {
+            "type": "IMAGE",
+            "skin": "DRM_CURRENCY_PANEL",
+            "backgroundColor": "#CC111820",
+            "frameColor": "#00000000"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 0,
+            "width": 168,
+            "height": 34,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 0
+          }
+        },
+        {
+          "id": "currency_wallet_icon",
+          "type": "IMAGE",
+          "renderer": {
+            "type": "IMAGE",
+            "skin": "DRM_CURRENCY_ICON",
+            "frameColor": "#00000000"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 6,
+            "y": 6,
+            "width": 22,
+            "height": 20,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 1
+          }
+        },
+        {
+          "id": "currency_wallet_name",
+          "type": "TEXT",
+          "binding": {
+            "type": "DRM_CURRENCY",
+            "format": "{name}"
+          },
+          "renderer": {
+            "color": "#D8DDE8",
+            "shadow": true,
+            "align": "LEFT"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 34,
+            "y": 6,
+            "width": 56,
+            "height": 10,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 2
+          }
+        },
+        {
+          "id": "currency_wallet_amount",
+          "type": "TEXT",
+          "binding": {
+            "type": "DRM_CURRENCY",
+            "format": "{formatted}"
+          },
+          "renderer": {
+            "color": "#A7FF70",
+            "shadow": true,
+            "align": "RIGHT"
+          },
+          "animation": {
+            "type": "SMOOTH_VALUE_LERP",
+            "durationTicks": 8
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 92,
+            "y": 6,
+            "width": 68,
+            "height": 10,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 3
+          }
+        }
+      ]
+    }
+  ]
+}

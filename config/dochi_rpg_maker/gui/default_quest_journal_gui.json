@@ -1,0 +1,120 @@
+{
+  "guiType": "quest_journal",
+  "id": "default_quest_journal_gui",
+  "layoutVersion": 2,
+  "designPreset": "standard",
+  "renderStyle": "sprite",
+  "spriteSheet": "dochi_rpg_maker:textures/gui/drm_ui_1.png",
+  "spriteLayout": "drm_v1",
+  "backgroundColor": "#10151C",
+  "backgroundOpacity": 95,
+  "backgroundColorNone": false,
+  "borderColor": "#4B5362",
+  "screenBackdropColor": "#0A0D12",
+  "screenBackdropOpacity": 89,
+  "stage": {
+    "width": 800,
+    "height": 450,
+    "baseResolution": { "width": 800, "height": 450 },
+    "backgroundColor": "#10151C",
+    "backgroundOpacity": 95,
+    "borderColor": "#4B5362",
+    "screenBackdropColor": "#0A0D12",
+    "screenBackdropOpacity": 89,
+    "backgroundImage": "",
+    "backgroundImagePath": "",
+    "backgroundImageFit": "stretch",
+    "backgroundImageCrop": { "enabled": false, "x": 0, "y": 0, "w": 0, "h": 0 }
+  },
+  "elements": [
+    {
+      "id": "quest_search", "type": "quest_search", "x": 24, "y": 22, "width": 270, "height": 24,
+      "fillColor": "#141B25", "fillOpacity": 100, "borderColor": "#5A6573", "borderNone": false,
+      "textColor": "#F1F5F9", "placeholderColor": "#8D96A5"
+    },
+    {
+      "id": "quest_tabs", "type": "quest_tabs", "x": 24, "y": 54, "width": 270, "height": 56,
+      "fillColor": "#151D27", "fillOpacity": 92, "borderColor": "#4B5362", "borderNone": false,
+      "columns": 2, "columnGap": 4, "rowGap": 4, "padding": 2,
+      "activeFillColor": "#345A78", "hoverFillColor": "#2C3B4D", "inactiveFillColor": "#1B2531",
+      "activeTextColor": "#FFFFFF", "inactiveTextColor": "#D8DDE8",
+      "activeBorderColor": "#8DB7FF", "inactiveBorderColor": "#48515F",
+      "iconSize": 14, "iconGap": 4,
+      "allIconMode": "none", "allIconImage": "", "allIconItem": "",
+      "in_progressIconMode": "none", "in_progressIconImage": "", "in_progressIconItem": "",
+      "availableIconMode": "none", "availableIconImage": "", "availableIconItem": "",
+      "finishedIconMode": "none", "finishedIconImage": "", "finishedIconItem": "",
+      "activeIconMode": "none", "activeIconImage": "", "activeIconItem": "",
+      "readyIconMode": "none", "readyIconImage": "", "readyIconItem": "",
+      "completedIconMode": "none", "completedIconImage": "", "completedIconItem": "",
+      "failedIconMode": "none", "failedIconImage": "", "failedIconItem": ""
+    },
+    {
+      "id": "quest_list", "type": "quest_list", "x": 24, "y": 118, "width": 270, "height": 286,
+      "fillColor": "#151D27", "fillOpacity": 92, "borderColor": "#4B5362", "borderNone": false,
+      "textColor": "#F1F5F9", "subtextColor": "#AEB7C5", "trackedColor": "#A7FF70",
+      "rowHeight": 38, "rowGap": 3, "rowFillColor": "#18202B", "hoverColor": "#2B3B50", "selectedColor": "#345A78",
+      "packHeaderColor": "#202D3C", "packTextColor": "#9DC5FF",
+      "categoryHeaderColor": "#1B2735", "categoryTextColor": "#E7C979", "categoryHoverColor": "#253447",
+      "availableColor": "#7FB5FF", "activeColor": "#FFD067", "readyColor": "#72DC93",
+      "completedColor": "#78B8A0", "failedColor": "#FF7777", "cooldownColor": "#B29AE8", "lockedColor": "#8D96A5", "unknownColor": "#8D96A5",
+      "scrollbarWidth": 4, "scrollbarRightInset": 2, "scrollbarMinThumbHeight": 14,
+      "scrollbarTrackColor": "#111820", "scrollbarThumbColor": "#6FA8FF"
+    },
+    {
+      "id": "quest_title", "type": "quest_title", "x": 314, "y": 22, "width": 462, "height": 48,
+      "fillColor": "#151D27", "fillOpacity": 92, "borderColor": "#4B5362", "borderNone": false,
+      "textColor": "#F3F5F8", "subtextColor": "#A8B0BD"
+    },
+    {
+      "id": "quest_description", "type": "quest_description", "x": 314, "y": 78, "width": 462, "height": 82,
+      "fillColor": "#151D27", "fillOpacity": 92, "borderColor": "#4B5362", "borderNone": false,
+      "textColor": "#CDD3DC", "warningColor": "#FFA05A"
+    },
+    {
+      "id": "quest_objectives", "type": "quest_objectives", "x": 314, "y": 168, "width": 462, "height": 124,
+      "fillColor": "#151D27", "fillOpacity": 92, "borderColor": "#4B5362", "borderNone": false,
+      "textColor": "#CDD3DC", "headingColor": "#E7C979", "completeColor": "#70CF8C", "blockedColor": "#737B87",
+      "targetRowHeight": 34, "textRowHeight": 12, "rowGap": 2,
+      "targetRenderSize": 30, "targetTextGap": 6, "indentWidth": 8,
+      "targetFillColor": "#111820", "targetBorderColor": "#48515F", "scrollStep": 18,
+      "scrollbarWidth": 4, "scrollbarRightInset": 2, "scrollbarMinThumbHeight": 14,
+      "scrollbarTrackColor": "#111820", "scrollbarThumbColor": "#6FA8FF"
+    },
+    {
+      "id": "quest_rewards", "type": "quest_rewards", "x": 314, "y": 300, "width": 462, "height": 70,
+      "fillColor": "#151D27", "fillOpacity": 92, "borderColor": "#4B5362", "borderNone": false,
+      "textColor": "#CDD3DC", "headingColor": "#E7C979"
+    },
+    {
+      "id": "quest_track", "type": "quest_track_button", "x": 314, "y": 382, "width": 108, "height": 26, "visible": false,
+      "fillColor": "#3D5D8B", "fillOpacity": 100, "hoverFillColor": "#5576A7",
+      "borderColor": "#677181", "hoverBorderColor": "#9DC5FF", "borderNone": false, "textColor": "#F2F4F7",
+      "disabledFillColor": "#171A20", "disabledBorderColor": "#303844", "disabledTextColor": "#777F8E"
+    },
+    {
+      "id": "quest_accept", "type": "quest_accept_button", "x": 314, "y": 382, "width": 148, "height": 26,
+      "fillColor": "#315E48", "fillOpacity": 100, "hoverFillColor": "#43805F",
+      "borderColor": "#5F8370", "hoverBorderColor": "#83C7A0", "borderNone": false, "textColor": "#F2F4F7",
+      "disabledFillColor": "#171A20", "disabledBorderColor": "#303844", "disabledTextColor": "#777F8E"
+    },
+    {
+      "id": "quest_abandon", "type": "quest_abandon_button", "x": 314, "y": 382, "width": 148, "height": 26,
+      "fillColor": "#793A3A", "fillOpacity": 100, "hoverFillColor": "#A44A4A",
+      "borderColor": "#8D5A5A", "hoverBorderColor": "#D97B7B", "borderNone": false, "textColor": "#F2F4F7",
+      "disabledFillColor": "#171A20", "disabledBorderColor": "#303844", "disabledTextColor": "#777F8E"
+    },
+    {
+      "id": "quest_refresh", "type": "quest_refresh_button", "x": 470, "y": 382, "width": 148, "height": 26,
+      "fillColor": "#343B45", "fillOpacity": 100, "hoverFillColor": "#4A535F",
+      "borderColor": "#677181", "hoverBorderColor": "#9DC5FF", "borderNone": false, "textColor": "#F2F4F7",
+      "disabledFillColor": "#171A20", "disabledBorderColor": "#303844", "disabledTextColor": "#777F8E"
+    },
+    {
+      "id": "quest_close", "type": "quest_close_button", "x": 626, "y": 382, "width": 150, "height": 26,
+      "fillColor": "#343B45", "fillOpacity": 100, "hoverFillColor": "#4A535F",
+      "borderColor": "#677181", "hoverBorderColor": "#9DC5FF", "borderNone": false, "textColor": "#F2F4F7",
+      "disabledFillColor": "#171A20", "disabledBorderColor": "#303844", "disabledTextColor": "#777F8E"
+    }
+  ]
+}

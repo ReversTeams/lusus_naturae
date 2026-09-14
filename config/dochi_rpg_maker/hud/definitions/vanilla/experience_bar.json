@@ -1,0 +1,82 @@
+{
+  "id": "dochi_rpg_maker:custom_experience_bar",
+  "name": "Custom Experience Bar",
+  "mode": "VANILLA_REPLACEMENT",
+  "replaceVanilla": "EXPERIENCE",
+  "version": 1,
+  "enabled": false,
+  "elements": [
+    {
+      "id": "experience_group",
+      "type": "GROUP",
+      "transform": {
+        "anchor": "BOTTOM_CENTER",
+        "x": -91,
+        "y": -32,
+        "width": 182,
+        "height": 18,
+        "scale": 1.0,
+        "rotation": 0.0,
+        "zIndex": 10
+      },
+      "children": [
+        {
+          "id": "experience_fill",
+          "type": "BAR",
+          "binding": {
+            "type": "VANILLA_EXPERIENCE",
+            "field": "ratio"
+          },
+          "renderer": {
+            "type": "BAR",
+            "skin": "DRM_GAUGE",
+            "fillMode": "HORIZONTAL_LEFT_TO_RIGHT",
+            "backgroundColor": "#CC111820",
+            "fillColor": "#FFA7FF70",
+            "frameColor": "#00000000",
+            "lossColor": "#FFFFD45C",
+            "lossDelayTicks": 4,
+            "lossDurationTicks": 10
+          },
+          "animation": {
+            "type": "SMOOTH_VALUE_LERP",
+            "durationTicks": 8
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 0,
+            "y": 8,
+            "width": 182,
+            "height": 6,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 1
+          }
+        },
+        {
+          "id": "experience_text",
+          "type": "TEXT",
+          "binding": {
+            "type": "VANILLA_EXPERIENCE",
+            "format": "{level}"
+          },
+          "renderer": {
+            "color": "#A7FF70",
+            "shadow": true,
+            "align": "CENTER"
+          },
+          "transform": {
+            "anchor": "TOP_LEFT",
+            "x": 62,
+            "y": -2,
+            "width": 58,
+            "height": 10,
+            "scale": 1.0,
+            "rotation": 0.0,
+            "zIndex": 2
+          }
+        }
+      ]
+    }
+  ]
+}
