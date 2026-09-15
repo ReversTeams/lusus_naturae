@@ -72,6 +72,7 @@ kubejs/probe
 config/QuantifiedAPI/cache
 .shadered_natives
 profileImage
+zfastnoise.mixin.properties
 
 # explicitly included config
 !config/ProjectE/client.toml
