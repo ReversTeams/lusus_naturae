@@ -1,0 +1,17 @@
+{
+  "_comment": "Server authoritative. FULL preserves existing NPCs; BASIC disables every optional feature. NPC values are retained. Edit while stopped or use an operator\u0027s Mods Config tab.",
+  "DW_IDLE": true,
+  "CUSTOM_TARGETING": true,
+  "ADVANCED_RULES": true,
+  "HEARING": true,
+  "AWARENESS": true,
+  "COMBAT_MEMORY": true,
+  "TACTICAL_MOVEMENT": true,
+  "COVER": true,
+  "SUPPRESSION_FIRE": true,
+  "GRENADES": true,
+  "FACTION_ASSIST": true,
+  "BOOBY_TRAPS": true,
+  "VEHICLE_AI": true,
+  "MERCENARY_AI": true
+}

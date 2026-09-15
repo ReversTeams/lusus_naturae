@@ -1,0 +1,27 @@
+{
+  "favorites": [],
+  "lookup_history": [
+    "item:shadered:deepslate_illusorite_ore{BlockEntityTag:{blockType:\"ECLIPSE\",pass:\"NORMAL\"}}",
+    "item:cybernetic_system:special_chip_dna",
+    {
+      "type": "item",
+      "id": "cybernetic_system:core_4546",
+      "amount": 2
+    },
+    "item:cybernetic_system:energy_katana{Damage:0}",
+    "item:cyber_ware_port:cyberlimbs_cyberarm_left",
+    "item:cyber_ware_port:cyber_wither_skeleton_spawn_egg",
+    "item:cybernetic_system:blue_card_for_door",
+    "item:cybernetic_system:electric_baton{Damage:0}",
+    "item:cybernetic_system:iron_plate",
+    "item:cybernetic_system:energy_module"
+  ],
+  "craft_history": [],
+  "recipe_defaults": {
+    "added": [],
+    "tags": {},
+    "resolutions": {},
+    "disabled": []
+  },
+  "hidden_stacks": []
+}

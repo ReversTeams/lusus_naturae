@@ -1,0 +1,19 @@
+{
+  "csfoundation:steel_leggings": [
+    {
+      "explosionPower": 0.0,
+      "roundingType": "STANDARD",
+      "requiredHits": 3.0,
+      "explosionChance": 0.0,
+      "lootable": {
+        "amountForMaxReturn": 1,
+        "autoGenerateFromRecipe": true,
+        "recipeId": "csfoundation:steel_leggings",
+        "returnAmount": {
+          "min": 30.0,
+          "max": 70.0
+        }
+      }
+    }
+  ]
+}

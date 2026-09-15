@@ -1,0 +1,36 @@
+{
+  "type": "popup_definition",
+  "version": 6,
+  "id": "default_battle_combat_popup",
+  "name": "Combat Dialogue",
+  "enabled": true,
+  "gui": "default_battle_combat_gui.json",
+  "channel": "battleworks_combat",
+  "priority": 100,
+  "conflict": "replace",
+  "instanceKey": "default_battle_combat_popup",
+  "content": {
+    "title": "",
+    "subtitle": "",
+    "text": "",
+    "titleTranslationKey": false,
+    "subtitleTranslationKey": false,
+    "textTranslationKey": false,
+    "titleStyles": [],
+    "subtitleStyles": [],
+    "textStyles": [],
+    "titleAlignment": "center",
+    "subtitleAlignment": "left",
+    "textAlignment": "left"
+  },
+  "timeline": {
+    "fadeInTicks": 4,
+    "holdTicks": 64,
+    "fadeOutTicks": 10
+  },
+  "sound": {
+    "id": "minecraft:block.amethyst_block.resonate",
+    "volume": 0.45,
+    "pitch": 0.85
+  }
+}

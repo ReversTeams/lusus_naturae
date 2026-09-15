@@ -1,0 +1,12 @@
+
+#General settings
+[scraps]
+
+	[scraps.composter]
+		#If true then some of the scraps will be allowed to go into the minecraft:composter block (shard_bone, shard_leather, shard_paper, shard_wood only)
+		enabled = true
+
+	[scraps.steptobreak]
+		#If true then stepping on a scrap pile will harvest it
+		enabled = true
+

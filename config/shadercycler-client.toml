@@ -29,5 +29,5 @@
 	endShader = "None"
 	#List of dimension=shader mappings. Example: minecraft:overworld=None
 	#Use 'None' to indicate no shader for that dimension.
-	dimensionShaderList = ["minecraft:overworld=None", "minecraft:the_nether=None", "minecraft:the_end=None"]
+	dimensionShaderList = ["minecraft:overworld=None", "minecraft:the_end=None", "minecraft:the_nether=None", "otherverse:ruins=None"]
 

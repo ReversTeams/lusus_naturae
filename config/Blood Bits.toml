@@ -22,7 +22,7 @@
 
 [screen_effects]
 	#Bloody screen effect when a mob is attacked
-	"Bloody Screen" = true
+	"Bloody Screen" = false
 	"Bloody Screen Mid Range" = 8.0
 	"Bloody Screen Close Range" = 3.0
 	#Control how fast blood dissapears from the screen (Default is -1% opacity per tick)

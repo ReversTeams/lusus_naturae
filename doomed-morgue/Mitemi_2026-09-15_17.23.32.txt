@@ -1,0 +1,13 @@
+DOOMED - CASE FILE
+Mitemi
+2026-09-15 17:23:32
+
+  BEFORE IT STOPPED                                   INTERVAL
+    Thorax opened. (x7)                                     1s
+    Head turned.                                            0s
+    Head opened. Major vessel.                              0s
+
+  Alive 44s.
+
+  EXSANGUINATION
+  It ran out of this body onto the ground.

@@ -1,0 +1,866 @@
+{
+  "schema": "dochi.battleworks.v1",
+  "id": "battleworks_default",
+  "displayName": "Battleworks Default",
+  "enabled": true,
+  "description": "Executable starter graph for the Battleworks visual pattern editor.",
+  "combat": {
+    "suppressNativeAttacks": true,
+    "suppressCustomNpcScripts": false,
+    "engageDelayMin": 10,
+    "engageDelayMax": 18,
+    "combatResetDelayTicks": 100,
+    "retryDelayTicks": 10,
+    "targeting": {
+      "scanWhenNoTarget": true,
+      "scanRange": 32.0,
+      "requireLineOfSight": false,
+      "fovDegrees": 160.0,
+      "chaseTarget": true,
+      "faceTarget": true,
+      "chaseSpeed": 1.0,
+      "preferredDistance": 2.0
+    },
+    "parry": {
+      "mode": "magic_and_melee",
+      "magicProjectileDeflect": true,
+      "betterCombatMelee": true,
+      "inputWindowTicks": 6,
+      "cooldownTicks": 18,
+      "frontAngleDegrees": 100.0,
+      "maxDistance": 3.2,
+      "staggerTicks": 40,
+      "riposteWindowTicks": 50,
+      "riposteDamageMultiplier": 2.5,
+      "usePosture": false,
+      "maxPosture": 100.0
+    },
+    "bgm": {
+      "enabled": false,
+      "soundId": "",
+      "volume": 0.7,
+      "pitch": 1.0
+    }
+  },
+  "npcStats": {
+    "enabled": false,
+    "maxHealth": 0.0,
+    "movementSpeed": 0.0,
+    "phase2MovementSpeed": 0.0,
+    "phase3MovementSpeed": 0.0,
+    "followRange": 0.0,
+    "idleRegenPerSecond": 0.0,
+    "combatRegenPerSecond": 0.0
+  },
+  "manager": {
+    "globalCooldownTicks": 0,
+    "avoidImmediateRepeat": true,
+    "maxCombo": 3,
+    "maxComboPhase2": -1,
+    "maxComboPhase3": -1,
+    "selectionFloor": 0.68,
+    "samePatternPenalty": 0.2,
+    "recentPatternPenalty": 0.55,
+    "sameRolePenalty": 0.45,
+    "randomFactor": 0.12,
+    "mobilityUrgencyTicks": 80,
+    "mobilityBonus": 0.8,
+    "maxStationaryStreak": 2,
+    "stationaryChainPenalty": 0.25,
+    "recoveryMin": 8,
+    "recoveryMax": 14
+  },
+  "phases": [
+    {
+      "index": 1,
+      "id": "phase_1",
+      "name": "Opening",
+      "enabled": true,
+      "enterAtHealthRatio": 1.0,
+      "transitionPatternId": ""
+    },
+    {
+      "index": 2,
+      "id": "phase_2",
+      "name": "Pressure",
+      "enabled": true,
+      "enterAtHealthRatio": 0.6,
+      "transitionPatternId": "arc_burst"
+    },
+    {
+      "index": 3,
+      "id": "phase_3",
+      "name": "Desperation",
+      "enabled": true,
+      "enterAtHealthRatio": 0.3,
+      "transitionPatternId": "gap_close"
+    }
+  ],
+  "hitboxes": [
+    {
+      "id": "slash_arc",
+      "name": "Slash Arc",
+      "shape": "sweep",
+      "damage": 6.0,
+      "radius": 0.9,
+      "width": 2.4,
+      "height": 1.8,
+      "depth": 2.8,
+      "thickness": 0.75,
+      "yaw": 0.0,
+      "pitch": 0.0,
+      "offsetX": 0.0,
+      "offsetY": 0.9,
+      "offsetZ": 1.4,
+      "sweepSteps": 8,
+      "arcStartYaw": 75.0,
+      "arcStartPitch": 15.0,
+      "arcEndYaw": -75.0,
+      "arcEndPitch": -15.0,
+      "lockedTargetOnly": false,
+      "effectId": "",
+      "effectAmplifier": 0,
+      "effectDurationTicks": 100,
+      "effectShowParticles": true,
+      "effectAmbient": false,
+      "points": []
+    },
+    {
+      "id": "lunge_box",
+      "name": "Lunge Box",
+      "shape": "box",
+      "damage": 8.0,
+      "radius": 0.9,
+      "width": 1.6,
+      "height": 1.8,
+      "depth": 3.5,
+      "thickness": 0.75,
+      "yaw": 0.0,
+      "pitch": 0.0,
+      "offsetX": 0.0,
+      "offsetY": 0.9,
+      "offsetZ": 2.0,
+      "sweepSteps": 6,
+      "arcStartYaw": 90.0,
+      "arcStartPitch": 20.0,
+      "arcEndYaw": -90.0,
+      "arcEndPitch": -20.0,
+      "lockedTargetOnly": true,
+      "effectId": "",
+      "effectAmplifier": 0,
+      "effectDurationTicks": 100,
+      "effectShowParticles": true,
+      "effectAmbient": false,
+      "points": []
+    }
+  ],
+  "particleEffects": [],
+  "patterns": [
+    {
+      "id": "basic_slash",
+      "name": "Basic Slash",
+      "enabled": true,
+      "role": "melee",
+      "trigger": {
+        "type": "manager",
+        "chancePercent": 100.0,
+        "chancePhase2": -1.0,
+        "chancePhase3": -1.0,
+        "healthRatio": 0.5,
+        "minimumDamage": 1.0,
+        "cooldownTicks": 100,
+        "queueTicks": 200,
+        "oncePerCombat": true,
+        "busyPolicy": "queue",
+        "interruptActive": false,
+        "cancelDamage": false,
+        "frontAngleDegrees": 360.0,
+        "windowTicks": 20,
+        "threshold": 1.0,
+        "thresholdPhase2": -1.0,
+        "thresholdPhase3": -1.0,
+        "successState": ""
+      },
+      "priority": 10,
+      "minPhase": 1,
+      "maxPhase": 16,
+      "minDistance": 0.0,
+      "maxDistance": 4.0,
+      "maxVertical": 3.0,
+      "minBossHealth": 0.0,
+      "maxBossHealth": 1.0,
+      "minTargetHealth": 0.0,
+      "maxTargetHealth": 1.0,
+      "requiresLineOfSight": false,
+      "targetRequired": true,
+      "mobility": false,
+      "stationary": true,
+      "uninterruptible": false,
+      "parryable": true,
+      "postureDamageOnParry": 25.0,
+      "cooldownTicks": 18,
+      "recoveryTicks": 8,
+      "recoveryMinTicks": -1,
+      "recoveryMaxTicks": -1,
+      "comboChancePercent": 100.0,
+      "comboChancePhase2": -1.0,
+      "comboChancePhase3": -1.0,
+      "positioning": "neutral",
+      "conditions": [],
+      "score": {
+        "base": 12.0,
+        "idealDistance": 2.3,
+        "distancePeak": 4.0,
+        "phase2Bonus": 0.0,
+        "phase3Bonus": 0.0,
+        "missingBossHealth": 0.0,
+        "lowTargetAt": -1.0,
+        "lowTargetBonus": 0.0,
+        "closeAt": 3.0,
+        "closeBonus": 3.0,
+        "farAt": -1.0,
+        "farBonus": 0.0,
+        "noLineOfSightBonus": 0.0,
+        "lineOfSightBonus": 0.0,
+        "mobilityAgeRate": 0.0,
+        "mobilityAgeCap": 30.0,
+        "stationaryStreakRate": 0.0,
+        "closingAt": -1.0,
+        "closingBonus": 0.0,
+        "retreatingAt": -1.0,
+        "retreatingBonus": 0.0,
+        "targetSpeedRate": 0.0,
+        "targetSpeedCap": 0.0,
+        "phaseWeights": {}
+      },
+      "windup": {
+        "id": "windup",
+        "ticks": 8,
+        "faceTarget": true,
+        "stopHorizontal": false,
+        "movement": {
+          "type": "hold",
+          "speed": 0.0,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "attack",
+          "playback": "once",
+          "speed": 1.0,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "minecraft:end_rod",
+          "interval": 2,
+          "count": 1,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": []
+      },
+      "action": {
+        "id": "action",
+        "ticks": 12,
+        "faceTarget": false,
+        "stopHorizontal": true,
+        "movement": {
+          "type": "hold",
+          "speed": 0.0,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "attack",
+          "playback": "once",
+          "speed": 1.0,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "",
+          "interval": 1,
+          "count": 1,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": [
+          {
+            "id": "slash_hit",
+            "at": 5,
+            "interval": 0,
+            "count": 1,
+            "chancePercent": 100.0,
+            "actions": [
+              {
+                "type": "dochi_battleworks:hitbox",
+                "chancePercent": 100.0,
+                "params": {
+                  "hitboxId": "slash_arc",
+                  "damageMultiplier": 1.0
+                }
+              }
+            ],
+            "conditions": []
+          }
+        ]
+      },
+      "recovery": {
+        "id": "recovery",
+        "ticks": 10,
+        "faceTarget": true,
+        "stopHorizontal": false,
+        "movement": {
+          "type": "none",
+          "speed": 0.0,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "",
+          "playback": "once",
+          "speed": 1.0,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "",
+          "interval": 1,
+          "count": 1,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": []
+      },
+      "combos": [
+        {
+          "patternId": "gap_close",
+          "chancePercent": 25.0,
+          "delayTicks": 6,
+          "delayMinTicks": -1,
+          "delayMaxTicks": -1,
+          "conditions": []
+        }
+      ],
+      "tags": [
+        "starter",
+        "melee"
+      ],
+      "canvasX": 24.0,
+      "canvasY": 24.0
+    },
+    {
+      "id": "gap_close",
+      "name": "Gap Close",
+      "enabled": true,
+      "role": "mobility",
+      "trigger": {
+        "type": "manager",
+        "chancePercent": 100.0,
+        "chancePhase2": -1.0,
+        "chancePhase3": -1.0,
+        "healthRatio": 0.5,
+        "minimumDamage": 1.0,
+        "cooldownTicks": 100,
+        "queueTicks": 200,
+        "oncePerCombat": true,
+        "busyPolicy": "queue",
+        "interruptActive": false,
+        "cancelDamage": false,
+        "frontAngleDegrees": 360.0,
+        "windowTicks": 20,
+        "threshold": 1.0,
+        "thresholdPhase2": -1.0,
+        "thresholdPhase3": -1.0,
+        "successState": ""
+      },
+      "priority": 8,
+      "minPhase": 1,
+      "maxPhase": 16,
+      "minDistance": 3.0,
+      "maxDistance": 12.0,
+      "maxVertical": 4.0,
+      "minBossHealth": 0.0,
+      "maxBossHealth": 1.0,
+      "minTargetHealth": 0.0,
+      "maxTargetHealth": 1.0,
+      "requiresLineOfSight": false,
+      "targetRequired": true,
+      "mobility": true,
+      "stationary": false,
+      "uninterruptible": false,
+      "parryable": true,
+      "postureDamageOnParry": 25.0,
+      "cooldownTicks": 36,
+      "recoveryTicks": 10,
+      "recoveryMinTicks": -1,
+      "recoveryMaxTicks": -1,
+      "comboChancePercent": 100.0,
+      "comboChancePhase2": -1.0,
+      "comboChancePhase3": -1.0,
+      "positioning": "neutral",
+      "conditions": [],
+      "score": {
+        "base": 8.0,
+        "idealDistance": 7.0,
+        "distancePeak": 6.0,
+        "phase2Bonus": 0.0,
+        "phase3Bonus": 0.0,
+        "missingBossHealth": 0.0,
+        "lowTargetAt": -1.0,
+        "lowTargetBonus": 0.0,
+        "closeAt": -1.0,
+        "closeBonus": 0.0,
+        "farAt": 6.0,
+        "farBonus": 8.0,
+        "noLineOfSightBonus": 0.0,
+        "lineOfSightBonus": 0.0,
+        "mobilityAgeRate": 0.08,
+        "mobilityAgeCap": 30.0,
+        "stationaryStreakRate": 0.0,
+        "closingAt": -1.0,
+        "closingBonus": 0.0,
+        "retreatingAt": -1.0,
+        "retreatingBonus": 0.0,
+        "targetSpeedRate": 0.0,
+        "targetSpeedCap": 0.0,
+        "phaseWeights": {}
+      },
+      "windup": {
+        "id": "windup",
+        "ticks": 10,
+        "faceTarget": true,
+        "stopHorizontal": true,
+        "movement": {
+          "type": "hold",
+          "speed": 0.0,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "",
+          "playback": "once",
+          "speed": 1.0,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "minecraft:crit",
+          "interval": 2,
+          "count": 2,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": []
+      },
+      "action": {
+        "id": "action",
+        "ticks": 10,
+        "faceTarget": true,
+        "stopHorizontal": false,
+        "movement": {
+          "type": "dash",
+          "speed": 0.72,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 2,
+          "tracking": true,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "attack",
+          "playback": "once",
+          "speed": 1.15,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "minecraft:sweep_attack",
+          "interval": 1,
+          "count": 1,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": [
+          {
+            "id": "lunge_hit",
+            "at": 7,
+            "interval": 0,
+            "count": 1,
+            "chancePercent": 100.0,
+            "actions": [
+              {
+                "type": "dochi_battleworks:hitbox",
+                "chancePercent": 100.0,
+                "params": {
+                  "hitboxId": "lunge_box",
+                  "damageMultiplier": 1.0
+                }
+              }
+            ],
+            "conditions": []
+          }
+        ]
+      },
+      "recovery": {
+        "id": "recovery",
+        "ticks": 12,
+        "faceTarget": true,
+        "stopHorizontal": false,
+        "movement": {
+          "type": "away",
+          "speed": 0.18,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "",
+          "playback": "once",
+          "speed": 1.0,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "",
+          "interval": 1,
+          "count": 1,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": []
+      },
+      "combos": [
+        {
+          "patternId": "basic_slash",
+          "chancePercent": 55.0,
+          "delayTicks": 4,
+          "delayMinTicks": -1,
+          "delayMaxTicks": -1,
+          "conditions": []
+        }
+      ],
+      "tags": [
+        "starter",
+        "mobility"
+      ],
+      "canvasX": 204.0,
+      "canvasY": 24.0
+    },
+    {
+      "id": "arc_burst",
+      "name": "Arc Burst",
+      "enabled": true,
+      "role": "pressure",
+      "trigger": {
+        "type": "manager",
+        "chancePercent": 100.0,
+        "chancePhase2": -1.0,
+        "chancePhase3": -1.0,
+        "healthRatio": 0.5,
+        "minimumDamage": 1.0,
+        "cooldownTicks": 100,
+        "queueTicks": 200,
+        "oncePerCombat": true,
+        "busyPolicy": "queue",
+        "interruptActive": false,
+        "cancelDamage": false,
+        "frontAngleDegrees": 360.0,
+        "windowTicks": 20,
+        "threshold": 1.0,
+        "thresholdPhase2": -1.0,
+        "thresholdPhase3": -1.0,
+        "successState": ""
+      },
+      "priority": 12,
+      "minPhase": 2,
+      "maxPhase": 16,
+      "minDistance": 1.5,
+      "maxDistance": 6.0,
+      "maxVertical": 4.0,
+      "minBossHealth": 0.0,
+      "maxBossHealth": 1.0,
+      "minTargetHealth": 0.0,
+      "maxTargetHealth": 1.0,
+      "requiresLineOfSight": false,
+      "targetRequired": true,
+      "mobility": false,
+      "stationary": true,
+      "uninterruptible": false,
+      "parryable": true,
+      "postureDamageOnParry": 25.0,
+      "cooldownTicks": 54,
+      "recoveryTicks": 12,
+      "recoveryMinTicks": -1,
+      "recoveryMaxTicks": -1,
+      "comboChancePercent": 100.0,
+      "comboChancePhase2": -1.0,
+      "comboChancePhase3": -1.0,
+      "positioning": "neutral",
+      "conditions": [],
+      "score": {
+        "base": 10.0,
+        "idealDistance": 3.5,
+        "distancePeak": 5.0,
+        "phase2Bonus": 4.0,
+        "phase3Bonus": 8.0,
+        "missingBossHealth": 5.0,
+        "lowTargetAt": -1.0,
+        "lowTargetBonus": 0.0,
+        "closeAt": -1.0,
+        "closeBonus": 0.0,
+        "farAt": -1.0,
+        "farBonus": 0.0,
+        "noLineOfSightBonus": 0.0,
+        "lineOfSightBonus": 0.0,
+        "mobilityAgeRate": 0.0,
+        "mobilityAgeCap": 30.0,
+        "stationaryStreakRate": 0.0,
+        "closingAt": -1.0,
+        "closingBonus": 0.0,
+        "retreatingAt": -1.0,
+        "retreatingBonus": 0.0,
+        "targetSpeedRate": 0.0,
+        "targetSpeedCap": 0.0,
+        "phaseWeights": {}
+      },
+      "windup": {
+        "id": "windup",
+        "ticks": 14,
+        "faceTarget": true,
+        "stopHorizontal": true,
+        "movement": {
+          "type": "hold",
+          "speed": 0.0,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "attack",
+          "playback": "once",
+          "speed": 0.8,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "minecraft:electric_spark",
+          "interval": 2,
+          "count": 3,
+          "spread": 0.4,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": []
+      },
+      "action": {
+        "id": "action",
+        "ticks": 14,
+        "faceTarget": false,
+        "stopHorizontal": true,
+        "movement": {
+          "type": "hold",
+          "speed": 0.0,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "attack",
+          "playback": "once",
+          "speed": 1.2,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "minecraft:sweep_attack",
+          "interval": 3,
+          "count": 2,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": [
+          {
+            "id": "arc_first",
+            "at": 4,
+            "interval": 0,
+            "count": 1,
+            "chancePercent": 100.0,
+            "actions": [
+              {
+                "type": "dochi_battleworks:hitbox",
+                "chancePercent": 100.0,
+                "params": {
+                  "hitboxId": "slash_arc",
+                  "damageMultiplier": 0.85
+                }
+              }
+            ],
+            "conditions": []
+          },
+          {
+            "id": "arc_second",
+            "at": 10,
+            "interval": 0,
+            "count": 1,
+            "chancePercent": 100.0,
+            "actions": [
+              {
+                "type": "dochi_battleworks:hitbox",
+                "chancePercent": 100.0,
+                "params": {
+                  "hitboxId": "slash_arc",
+                  "damageMultiplier": 1.15
+                }
+              }
+            ],
+            "conditions": []
+          }
+        ]
+      },
+      "recovery": {
+        "id": "recovery",
+        "ticks": 16,
+        "faceTarget": true,
+        "stopHorizontal": false,
+        "movement": {
+          "type": "away",
+          "speed": 0.12,
+          "direction": "toward",
+          "radius": 6.0,
+          "distance": 4.0,
+          "durationTicks": 20,
+          "arriveDistance": 1.5,
+          "slowDistance": 4.0,
+          "leadTicks": 0,
+          "tracking": false,
+          "switchTicks": 6,
+          "verticalPower": 0.72,
+          "segments": []
+        },
+        "animation": {
+          "explicitSelection": false,
+          "provider": "drm_behavior",
+          "id": "",
+          "playback": "once",
+          "speed": 1.0,
+          "fadeTicks": 2
+        },
+        "telegraph": {
+          "particle": "",
+          "interval": 1,
+          "count": 1,
+          "spread": 0.0,
+          "yOffset": 0.55,
+          "speed": 0.01
+        },
+        "events": []
+      },
+      "combos": [
+        {
+          "patternId": "gap_close",
+          "chancePercent": 35.0,
+          "delayTicks": 8,
+          "delayMinTicks": -1,
+          "delayMaxTicks": -1,
+          "conditions": []
+        }
+      ],
+      "tags": [
+        "starter",
+        "phase_2",
+        "pressure"
+      ],
+      "canvasX": 114.0,
+      "canvasY": 108.0
+    }
+  ],
+  "death": {
+    "enabled": false,
+    "durationTicks": 60,
+    "lockCorpse": true,
+    "events": []
+  }
+}

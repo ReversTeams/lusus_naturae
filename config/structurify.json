@@ -1,9 +1,216 @@
 {
   "config_version": "2.0.35",
-  "config_datetime": "2026-09-12_21-14-06",
-  "general": {},
+  "config_datetime": "2026-09-15_17-34-38",
+  "general": {
+    "disable_all_structures": true
+  },
   "structure_namespaces": [],
-  "structures": [],
+  "structures": [
+    {
+      "name": "minecraft:ancient_city",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:bastion_remnant",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:buried_treasure",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:desert_pyramid",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:end_city",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:fortress",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:igloo",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:jungle_pyramid",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:mansion",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:mineshaft",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:mineshaft_mesa",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:monument",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:nether_fossil",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ocean_ruin_cold",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ocean_ruin_warm",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:pillager_outpost",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_desert",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_jungle",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_mountain",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_nether",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_ocean",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:ruined_portal_swamp",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:shipwreck",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:shipwreck_beached",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:stronghold",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:swamp_hut",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:trail_ruins",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_desert",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_plains",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_savanna",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_snowy",
+      "is_disabled": true
+    },
+    {
+      "name": "minecraft:village_taiga",
+      "is_disabled": true
+    },
+    {
+      "name": "cybernetic_system:mini_dna_laboratory",
+      "is_disabled": true
+    },
+    {
+      "name": "cybernetic_system:old_laboratory",
+      "is_disabled": true
+    },
+    {
+      "name": "cybernetic_system:ruins_of_bs_31",
+      "is_disabled": true
+    },
+    {
+      "name": "cybernetic_system:ruins_of_bs_54",
+      "is_disabled": true
+    },
+    {
+      "name": "cybernetic_system:the_core_of_the_protocol",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:appeasement",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:archbishop_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:archival_library",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:beach_poem",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:bishop_tower",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:butchers_igloo",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:campsite",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:common_shrine",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:graveyard",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:outpost",
+      "is_disabled": true
+    },
+    {
+      "name": "fathomless:rare_shrine",
+      "is_disabled": true
+    },
+    {
+      "name": "otherverse:brazier",
+      "is_disabled": true
+    },
+    {
+      "name": "strangematter:warp_gate_anomaly",
+      "is_disabled": true
+    }
+  ],
   "structure_sets": [],
   "structure_template_pools": []
 }

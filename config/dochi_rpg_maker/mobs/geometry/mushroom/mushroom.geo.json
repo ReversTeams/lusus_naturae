@@ -1,0 +1,96 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.mushroom_parent",
+				"texture_width": 128,
+				"texture_height": 256,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "mushroom_parent",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "right_leg",
+					"parent": "mushroom_parent",
+					"pivot": [-6, 11, 0],
+					"cubes": [
+						{"origin": [-11, 0, -5], "size": [10, 11, 10], "uv": [66, 75]}
+					]
+				},
+				{
+					"name": "left_leg",
+					"parent": "mushroom_parent",
+					"pivot": [6, 11, 0],
+					"cubes": [
+						{"origin": [1, 0, -5], "size": [10, 11, 10], "uv": [76, 54]}
+					]
+				},
+				{
+					"name": "torso",
+					"parent": "mushroom_parent",
+					"pivot": [0, 8, -0.6],
+					"cubes": [
+						{"origin": [-10, 8, -10], "size": [20, 14, 18], "inflate": 0.01, "uv": [0, 78]}
+					]
+				},
+				{
+					"name": "upper_torso",
+					"parent": "torso",
+					"pivot": [0, 22, 8],
+					"cubes": [
+						{"origin": [-10, 22, -10], "size": [20, 17, 18], "uv": [0, 43]}
+					]
+				},
+				{
+					"name": "left_arm",
+					"parent": "upper_torso",
+					"pivot": [10, 28, -0.5],
+					"rotation": [0, 0, 60],
+					"cubes": [
+						{"origin": [8, 25, -3], "size": [11, 6, 5], "inflate": 0.001, "uv": [58, 43]}
+					]
+				},
+				{
+					"name": "left_arm2",
+					"parent": "left_arm",
+					"pivot": [19, 28, 2.5],
+					"cubes": [
+						{"origin": [19, 25, -3], "size": [9, 6, 5], "uv": [0, 11]}
+					]
+				},
+				{
+					"name": "right_arm",
+					"parent": "upper_torso",
+					"pivot": [-10, 28, -0.5],
+					"rotation": [0, 0, -60],
+					"cubes": [
+						{"origin": [-19, 25, -3], "size": [11, 6, 5], "inflate": 0.001, "uv": [90, 43]}
+					]
+				},
+				{
+					"name": "right_arm2",
+					"parent": "right_arm",
+					"pivot": [-19, 28, 1.9],
+					"cubes": [
+						{"origin": [-28, 25, -3], "size": [9, 6, 5], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "cap",
+					"parent": "upper_torso",
+					"pivot": [0, 39, 0],
+					"cubes": [
+						{"origin": [-16, 39, -16], "size": [32, 11, 32], "uv": [0, 0]},
+						{"origin": [-16, 39, -16], "size": [32, 11, 32], "inflate": 0.5, "uv": [0, 110]}
+					]
+				}
+			]
+		}
+	]
+}
