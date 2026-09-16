@@ -51,6 +51,10 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "bf_blockpack": {
+    "fill": true,
+    "lantern": true
+  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,
@@ -61,10 +65,6 @@
   },
   "corpse": {
     "corpse": true
-  },
-  "doomedmatu": {
-    "machine": true,
-    "fluid_barrel": true
   },
   "balm": {
     "jade": true

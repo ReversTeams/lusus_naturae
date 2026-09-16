@@ -37,7 +37,7 @@
 
 	["No hunger"."Food tooltip"]
 		#(Client Only) If enabled, Foods will show "Snack" or "Nosh" when the food instantly heals and "Meal" or "Feast" when the food heals over time. If advanced tooltips are enabled, the food will show how much it restores
-		Enabled = true
+		Enabled = false
 		#Above how much health restored food tooltip will show Nosh instead of Snack
 		#Range: -1.7976931348623157E308 ~ 1.7976931348623157E308
 		"Nosh threshold" = 1.0

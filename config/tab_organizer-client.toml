@@ -5,9 +5,9 @@
 
 [menu]
 	#Show the Tab Organizer button in the creative inventory
-	show_creative_menu_button = true
+	show_creative_menu_button = false
 	#Show the config button in the Tab Organizer screen
-	show_organizer_config_button = true
+	show_organizer_config_button = false
 
 [compatibility]
 	#Replace JEI's flat ingredient list with CTO's creative-tab browser.

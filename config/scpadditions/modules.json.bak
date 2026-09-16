@@ -1,7 +1,7 @@
 {
   "inventory": {
     "remember_ui_state": true,
-    "enabled": true
+    "enabled": false
   },
   "interactions": {
     "disable_in_creative": false,
