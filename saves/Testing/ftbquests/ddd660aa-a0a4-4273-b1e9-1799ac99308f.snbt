@@ -1,0 +1,31 @@
+{
+	version: 1
+	uuid: "ddd660aaa0a44273b1e91799ac99308f"
+	name: "Mitemi#ddd660aa"
+	lock: false
+	rewards_blocked: false
+	task_progress: {
+		126A4F5513473E85: 1L
+	}
+	started: {
+		223435E400B9AA81: 1790102812485L
+		0000000000000001: 1790102812485L
+		126A4F5513473E85: 1790102812485L
+		478FCB6A3E60A4BD: 1790102812485L
+	}
+	completed: {
+		0000000000000000: 1790102812486L
+		223435E400B9AA81: 1790102812486L
+		0000000000000001: 1790102812486L
+		126A4F5513473E85: 1790102812486L
+		478FCB6A3E60A4BD: 1790102812486L
+	}
+	repeatable: { }
+	completion_count: { }
+	claimed_rewards: { }
+	player_data: {
+		ddd660aaa0a44273b1e91799ac99308f: {
+			can_edit: 1b
+		}
+	}
+}

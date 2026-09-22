@@ -1,0 +1,12 @@
+
+[balance]
+	#FE consumed per projected field block each tick while a field is running.
+	#Range: 0 ~ 10000
+	energyPerCellTick = 2
+	#FE stored by each Field Emitter and Field Rail.
+	#Range: 1000 ~ 1000000000
+	emitterCapacity = 100000
+	#Maximum FE per tick an emitter or rail accepts from cables and generators.
+	#Range: 1 ~ 1000000000
+	emitterTransferRate = 10000
+

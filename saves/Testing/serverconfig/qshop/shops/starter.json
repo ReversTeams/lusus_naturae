@@ -1,0 +1,68 @@
+{
+  "id": "starter",
+  "uuid": "325dbe2f-85bd-43e2-8a74-332d633dd82f",
+  "displayName": "新手商店",
+  "icon": "",
+  "tabs": [
+    {
+      "uuid": "8b63c4e7-48d5-41a9-9712-762620c75cef",
+      "name": "新手商店",
+      "entries": [
+        {
+          "uuid": "2aad19c2-eb01-4f8c-9ad0-a04ea4b76e8a",
+          "type": "SELL",
+          "item": "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxSslMzM3PS2FkYHXOL80rYWQAANl1hWQlAAAA",
+          "currency": "coins",
+          "price": 50.0
+        },
+        {
+          "uuid": "33a13ef6-43db-48da-8720-78008d21b60e",
+          "type": "BUY",
+          "item": "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxyk/Mjs/JT2dkYHXOL80r4WAAAGr+5OElAAAA",
+          "currency": "coins",
+          "price": 1.0
+        },
+        {
+          "uuid": "55646ad3-00d2-42e2-bb51-c23118005f0d",
+          "type": "BARTER",
+          "give": [
+            "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxSs1NLUrMSWFkYHXOL80rYWYAAEnvo6klAAAA"
+          ],
+          "receive": [
+            "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxSslMzM3PS2FkYHXOL80rYWQAANl1hWQlAAAA"
+          ],
+          "currency": "",
+          "price": 0.0
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "uuid": "2aad19c2-eb01-4f8c-9ad0-a04ea4b76e8a",
+      "type": "SELL",
+      "item": "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxSslMzM3PS2FkYHXOL80rYWQAANl1hWQlAAAA",
+      "currency": "coins",
+      "price": 50.0
+    },
+    {
+      "uuid": "33a13ef6-43db-48da-8720-78008d21b60e",
+      "type": "BUY",
+      "item": "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxyk/Mjs/JT2dkYHXOL80r4WAAAGr+5OElAAAA",
+      "currency": "coins",
+      "price": 1.0
+    },
+    {
+      "uuid": "55646ad3-00d2-42e2-bb51-c23118005f0d",
+      "type": "BARTER",
+      "give": [
+        "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxSs1NLUrMSWFkYHXOL80rYWYAAEnvo6klAAAA"
+      ],
+      "receive": [
+        "H4sIAAAAAAAA/+NiYOBgYMpMYRDMzcxLTS5KTCuxSslMzM3PS2FkYHXOL80rYWQAANl1hWQlAAAA"
+      ],
+      "currency": "",
+      "price": 0.0
+    }
+  ]
+}

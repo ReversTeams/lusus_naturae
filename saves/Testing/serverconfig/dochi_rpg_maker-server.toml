@@ -1,0 +1,6 @@
+
+[hud_maker]
+	#Maximum number of HUD components for each CustomNPCs data source type (tempdata and storeddata).
+	#Range: 1 ~ 16
+	customNpcsDataHudMaxInstances = 3
+

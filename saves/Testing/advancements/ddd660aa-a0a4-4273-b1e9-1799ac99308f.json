@@ -1,0 +1,345 @@
+{
+  "storagedrawers:recipes/storagedrawers/one_stack_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/diamond_storage_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/personal_key": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/remote_group_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/birch_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/void_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/warped_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/illumination_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/jungle_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/remote_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/fill_level_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/max_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/drawer_puller": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/personal_key_cofh": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/bamboo_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/acacia_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/crimson_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/mangrove_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/priority_key": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "strangematter:root": {
+    "criteria": {
+      "impossible": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/shroud_key": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/redstone_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/spruce_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/portability_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/quantify_key": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/dark_oak_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/oak_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/drawer_key": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/emerald_storage_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/obsidian_storage_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/cherry_trim": {
+    "criteria": {
+      "has_planks": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/min_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/iron_storage_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2026-09-22 14:17:56 -0400"
+    },
+    "done": false
+  },
+  "storagedrawers:recipes/storagedrawers/balance_fill_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "scp_additions:scp_additions_ach": {
+    "criteria": {
+      "scp_additions_ach": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/keyring": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/gold_storage_upgrade": {
+    "criteria": {
+      "has_template": "2026-09-22 14:17:56 -0400"
+    },
+    "done": true
+  },
+  "the_deep_void:the_deep_void_advancement": {
+    "criteria": {
+      "the_deep_void_advancement_0": "2026-09-22 14:17:59 -0400"
+    },
+    "done": true
+  },
+  "zifeng_s_custom_skill_tree:recipes/star_energy_converter": {
+    "criteria": {
+      "auto_unlock": "2026-09-22 14:17:59 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-09-22 14:17:59 -0400"
+    },
+    "done": true
+  },
+  "lootr:root": {
+    "criteria": {
+      "always_true": "2026-09-22 14:17:59 -0400"
+    },
+    "done": true
+  },
+  "fathomless:fathomless_crimson_advancement": {
+    "criteria": {
+      "fathomless_crimson_advancement_0": "2026-09-22 14:17:59 -0400"
+    },
+    "done": true
+  },
+  "simplytents:recipes/unlock_tents": {
+    "criteria": {
+      "tick": "2026-09-22 14:17:59 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/armor_stand": {
+    "criteria": {
+      "has_stone_slab": "2026-09-22 14:20:05 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2026-09-22 14:21:00 -0400"
+    },
+    "done": true
+  },
+  "scp_additions:tesla": {
+    "criteria": {
+      "tesla": "2026-09-22 14:24:07 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-22 14:39:20 -0400"
+    },
+    "done": true
+  },
+  "scp_additions:decon_achievement": {
+    "criteria": {
+      "decon_achievement": "2026-09-22 14:30:24 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-22 14:39:20 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-22 14:39:20 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2026-09-22 14:54:13 -0400"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/tame_an_animal": {
+    "criteria": {
+      "tamed_animal": "2026-09-22 14:56:41 -0400"
+    },
+    "done": true
+  },
+  "strangematter:energy_harvester": {
+    "criteria": {
+      "craft_resonance_condenser": "2026-09-22 14:52:32 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_coal": "2026-09-22 14:54:13 -0400"
+    },
+    "done": true
+  },
+  "strangematter:research_master": {
+    "criteria": {
+      "complete_all_research": "2026-09-22 14:46:54 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-09-22 14:58:42 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}
