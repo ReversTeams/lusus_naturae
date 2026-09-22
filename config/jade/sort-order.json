@@ -52,5 +52,8 @@
   "minecraft:waxed": null,
   "minecraft:zombie_villager": null,
   "storagedrawers:main": null,
-  "waystones:waystone": null
+  "waystones:waystone": null,
+  "zifeng_s_custom_skill_tree:converter": null,
+  "zifeng_s_custom_skill_tree:converter_data": null,
+  "zifeng_s_custom_skill_tree:creative_energy": null
 }

@@ -1,0 +1,493 @@
+#INTERNAL - do not edit. Config migration version used to force-sync defaults we changed.
+#内部配置迁移版本【请勿手动修改】，用于强制同步我们修改过的默认值
+#Range: > 0
+configVersion = 3
+
+#Skill Point Converter: FE consumed per 1 skill point (100M = 100000000)
+#技能点转换机：每消耗多少 FE 能量转换 1 点技能点
+[machine]
+	#FE per 1 skill point. Progress resets if energy input stops for >1s.
+	#每 1 点技能点所需能量（FE）
+	#Range: 1 ~ 9223372036854775807
+	energyPerSkillPoint = 100000000
+	#Staircase cost: starting cost per point (FE, default 10K) for fast early leveling.
+	#阶梯消耗：起始每点消耗（FE，默认 1 万）
+	#Range: 1 ~ 9223372036854775807
+	energyStartCost = 10000
+	#Staircase cost: ramps linearly from start to final cost within the first N points (default 2000), then stays final.
+	#阶梯消耗：前 N 点内线性递增到最终值
+	#Range: 1 ~ 1000000
+	energyStepPoints = 2000
+	#Converter: max energy input per tick (FE/t, default 100000). GUI "Unlimited Input" ignores this.
+	#技能点转换机：每 tick 最大输入能量
+	#Range: 1 ~ 9223372036854775807
+	machineMaxInputRate = 100000
+	#Converter: energy buffer cap (FE, 64-bit Long.MAX_VALUE = 9223372036854775807); stops receiving at cap.
+	#技能点转换机：能量缓冲上限
+	#Range: 1 ~ 9223372036854775807
+	machineEnergyCapacity = 9223372036854775807
+	#Converter GUI progress bar color (ARGB, starlight blue 0xFF4FC3F7 default).
+	#机器界面进度条颜色
+	#Range: > -2147483648
+	machineProgressColor = -11549705
+
+#Skill tree screen style
+#技能树界面样式
+[skillTree]
+	#Skill tree background (ARGB, light gray 0xFFBEBEBE; must be fully opaque).
+	#技能树界面背景色
+	#Range: > -2147483648
+	skillTreeBackgroundColor = -4276546
+	#Skill tree border color (ARGB, light blue 0xFF87CEEB).
+	#技能树界面边框色
+	#Range: > -2147483648
+	skillTreeBorderColor = -7876885
+	#Whether the attribute panel is visible (toggle in the panel top-right corner).
+	#属性面板是否显示
+	panelVisible = true
+	#Attribute panel position (0=right, 1=bottom; Shift+click the panel toggle to switch).
+	#属性面板位置
+	#Range: 0 ~ 1
+	panelPosition = 0
+	#Compress the vanilla heart bar when max health is above 20 (skill-boosted HP can reach tens of thousands,
+	#and vanilla draws one heart per 2 HP -> massive lag). Only the values fed to vanilla rendering are
+	#scaled (vanilla rendering code is untouched, so other health-bar mods keep working).
+	#Set false to restore exact vanilla behaviour.
+	#最大生命超过 20 时压缩原版血条（技能血量可达数万，原版每 2 点血 1 颗心 -> 严重卡顿）。
+	#仅压缩“喂给原版渲染的数值”，不改原版渲染代码（兼容其他血条模组）。设 false 恢复原版行为。
+	healthBarCompress = false
+	#Show the real health number to the left of the hearts (e.g. 51510.0 / 51510.0) when health is compressed.
+	#Reads the real vanilla values, so it includes HP added by other mods/equipment/potions.
+	#压缩血条时在血条左侧显示真实血量数字（例 51510.0 / 51510.0）。读取原版实时值，
+	#自动包含其他模组/装备/药水增加的生命值。
+	healthNumberEnabled = false
+	#Attribute panel data source: true = read live vanilla attribute values (includes equipment, potions and
+	#other mods' modifiers), false = old behaviour (skill bonuses only, no external modifiers).
+	#属性面板数据源：true=读取原版实时属性值（含装备/药水/其他模组加成），false=旧行为（仅技能计算值）。
+	panelUseVanillaAttributes = true
+
+#Economy: costs for leveling / ultimate unlocks / aura. Reopen the screen or press N to refresh after changes.
+#技能树经济数值
+[economy]
+	#Base skill cost per level (default 1.0).
+	#基础技能每级消耗
+	#Range: 0.01 ~ 100.0
+	basePointCost = 1.0
+	#Amplify skill cost per level (default 2.0).
+	#特殊增幅每级消耗
+	#Range: 0.01 ~ 100.0
+	amplifyPointCost = 2.0
+	#Ultimate prerequisite: points required in base/amplify columns (default 500).
+	#终极节点前置点数
+	#Range: 1 ~ 10000
+	ultimateRequirePoints = 500
+	#Favor of the Universe: one-time point cost (default 1000).
+	#宇宙的青睐消耗
+	#Range: 1 ~ 9223372036854775807
+	ultFavorCost = 1000
+	#Night Vision / Saturation: one-time point cost (default 100).
+	#夜视/饱食消耗
+	#Range: 1 ~ 9223372036854775807
+	minorUltCost = 100
+	#Aura base cost (per level, default 1000).
+	#杀戮光环基础消耗
+	#Range: 1 ~ 9223372036854775807
+	auraBaseCost = 1000
+	#Aura cost multiplier per level (default 1.05; next cost = base × rate^level).
+	#杀戮光环消耗递增倍率
+	#Range: 1.0 ~ 10.0
+	auraCostMultiplier = 1.05
+
+#Slaughter Aura: attack radius & frequency. Changes apply immediately.
+#杀戮光环：攻击半径与频率
+[aura]
+	#Auto-attack radius (blocks, default 20).
+	#自动攻击半径
+	#Range: 1.0 ~ 128.0
+	attackRadius = 20.0
+	#Void Spear: aura attack radius boost (blocks, default 50, one-shot range).
+	#虚空之矛光环半径
+	#Range: 1.0 ~ 128.0
+	voidAuraRadius = 50.0
+	#Aura base attack interval (ticks, 200 = once per 10s, without Speed aura).
+	#光环基础攻击间隔
+	#Range: 10 ~ 12000
+	auraBaseIntervalTicks = 200
+	#Aura Speed: interval reduction per level (multiplicative; 0.1 = ×0.9 per level;
+	#first 10 levels: 200->70 ticks, level 20 = 24 ticks = 0.83 attacks/s).
+	#光环速度：每级攻击间隔缩减比例
+	#Range: 0.0 ~ 0.5
+	auraSpeedIntervalReduction = 0.1
+	#Aura Damage: multiplier per level (0.10 = +10%/lvl, stacks multiplicatively on attack damage).
+	#杀戮光环·伤害每级倍率
+	#Range: 0.001 ~ 1.0
+	damageMultiplierPerLevel = 0.1
+	#Chaos damage: armor-piercing true damage ratio on aura hits (0.2 = 20% of main damage; Draconic Evolution chaos).
+	#混沌伤害比例
+	#Range: 0.0 ~ 1.0
+	auraChaosDamageRatio = 0.2
+
+#Magnet: vacuum XP & item drops (toggle with H). Changes apply immediately.
+#磁铁效果
+[magnet]
+	#Skill points to enable magnet (default 10).
+	#开启磁铁消耗
+	#Range: 0.0 ~ 100000.0
+	magnetCost = 10.0
+	#Item pickup radius (blocks, default 20, all directions, max 32).
+	#吸取掉落物半径
+	#Range: 1.0 ~ 32.0
+	magnetItemRadius = 20.0
+	#XP pickup radius (blocks, default 20, all directions, max 32).
+	#吸取经验半径
+	#Range: 1.0 ~ 32.0
+	magnetXpRadius = 20.0
+	#Void Spear: magnet radius boost (blocks, default 55, XP & items; requires Void Spear enabled).
+	#虚空之矛磁铁范围
+	#Range: 1.0 ~ 128.0
+	voidMagnetRadius = 55.0
+	#Aura Lock: one-time point cost (default 1000).
+	#光环锁定消耗
+	#Range: 1.0 ~ 1000000.0
+	lockCost = 1000.0
+	#Aura Void Spear: one-time point cost (default 5000).
+	#虚空之矛消耗
+	#Range: 1.0 ~ 1.0E7
+	voidAuraCost = 5000.0
+	#Void Body: one-time point cost (default 5000).
+	#虚空之躯消耗
+	#Range: 1.0 ~ 1.0E7
+	voidBodyCost = 5000.0
+	#Glowing (node ultimate): radius to apply Glowing to nearby mobs (blocks, default 35).
+	#发光半径
+	#Range: 1.0 ~ 128.0
+	glowRadius = 35.0
+
+#Ultimate passive values. Changes apply immediately.
+#终极节点被动数值
+[ultimate]
+	#Mastery: extra multiplier on all base attributes (0.25 = +25%).
+	#全能精通属性增幅
+	#Range: 0.0 ~ 5.0
+	masterBonus = 0.25
+	#Mastery: skill point gain rate (0.8 = -20%).
+	#全能精通技能点倍率
+	#Range: 0.01 ~ 5.0
+	masterSkillPointRate = 0.8
+	#Mastery: full damage reduction (1.0 = 100% immune; all damage types incl. true/chaos/command).
+	#全能精通全伤害减免
+	#Range: 0.0 ~ 1.0
+	masterDamageReduction = 1.0
+	#Mastery: undying cooldown (ticks, 1200 = 1 min).
+	#全能精通免死冷却
+	#Range: 100 ~ 240000
+	masterUndyingCooldown = 1200
+	#Mastery: undying invulnerability (ticks, 60 = 3s).
+	#全能精通免死无敌时长
+	#Range: 10 ~ 1200
+	masterUndyingInvuln = 60
+	#Mastery: undying heal ratio (0.5 = 50%).
+	#全能精通免死回血比例
+	#Range: 0.05 ~ 1.0
+	masterUndyingHealth = 0.5
+	#Blood Rage / Golden Body / Rebirth: one-time point cost (default 500).
+	#浴血奋战等一次性消耗
+	#Range: 1 ~ 9223372036854775807
+	ultBaseCost = 500
+	#Death's Gaze: one-time point cost (default 1000).
+	#死神凝视消耗
+	#Range: 1 ~ 9223372036854775807
+	ultReaperCost = 1000
+	#All-round Mastery: one-time point cost (default 5000).
+	#全能精通消耗
+	#Range: 1 ~ 9223372036854775807
+	ultMasterCost = 5000
+	#Node-type multi-level ultimate: cost increase ratio per level (0.1 = +10%).
+	#终极节点阶梯比率
+	#Range: 0.0 ~ 1.0
+	ultimateStepRate = 0.1
+	#Loot Bomb: drop multiplier cap (level 1 = 1x, linear 1+level, 100 levels = 101x; default 101).
+	#战利品爆炸封顶
+	#Range: 2 ~ 1000000
+	lootBombMaxMultiplier = 101
+	#Magnet aura: max items+XP orbs processed per tick (default 64; prevents lag from mass teleport).
+	#磁力每 tick 上限
+	#Range: 1 ~ 1000000
+	magnetMaxPerTick = 64
+	#Blood Rage: permanent attack bonus (0.5 = +50%).
+	#浴血奋战攻击增幅
+	#Range: 0.0 ~ 10.0
+	bloodAttackBonus = 0.5
+	#Blood Rage: permanent max health bonus (0.5 = +50%).
+	#浴血奋战生命增幅
+	#Range: 0.0 ~ 10.0
+	bloodHealthBonus = 0.5
+	#Golden Body: permanent Resistance level (10 = level 10, 0 = off).
+	#金身抗性等级
+	#Range: 0 ~ 255
+	goldenResistanceLevel = 10
+	#Golden Body: permanent Absorption level (100 = level 100, 0 = off).
+	#金身吸收等级
+	#Range: 0 ~ 255
+	goldenAbsorptionLevel = 100
+	#Golden Body: permanent Fire Resistance level (5 = level 5, 0 = off).
+	#金身抗火等级
+	#Range: 0 ~ 255
+	goldenFireResistanceLevel = 5
+
+#Arcane protection (2026-09-14). Magic reduction uses the MOBA formula D/(D+K): it never reaches 100%, so every level keeps its value.
+#奥术防护：魔法减伤用 MOBA 公式 D/(D+K)，永不封顶
+[arcane]
+	#Arcane Bulwark: defense value per level (default 0.6).
+	#奥术壁垒每级防御值
+	#Range: 0.0 ~ 1000.0
+	arcaneDefPerLevel = 0.6
+	#Arcane Mastery: extra defense per level added to Bulwark (default 0.4).
+	#奥术真解每级防御值
+	#Range: 0.0 ~ 1000.0
+	arcaneAmpDefPerLevel = 0.4
+	#Arcane Bulwark: formula constant K (default 1200); reduction = D/(D+K).
+	#奥术壁垒公式常数
+	#Range: 1.0 ~ 1000000.0
+	arcaneK = 1200.0
+	#Spell Dampening: defense value per level, only for indirect damage (default 0.5).
+	#法术抑制每级防御值
+	#Range: 0.0 ~ 1000.0
+	spellDampenPerLevel = 0.5
+	#Spell Dampening: formula constant K (default 800).
+	#法术抑制公式常数
+	#Range: 1.0 ~ 1000000.0
+	spellDampenK = 800.0
+	#Arcane Body (ultimate): multiplicative extra magic reduction (default 0.35).
+	#奥术神体额外魔法减伤
+	#Range: 0.0 ~ 0.95
+	arcaneUltReduction = 0.35
+	#Adaptive Body: reduction added per consecutive hit of the same damage type (default 0.02).
+	#适应之躯每层增量
+	#Range: 0.0 ~ 0.5
+	arcaneAdaptStep = 0.02
+	#Adaptive Body: maximum stacked reduction (default 0.60).
+	#适应之躯叠加上限
+	#Range: 0.0 ~ 0.95
+	arcaneAdaptMax = 0.6
+	#Spell Reflection: chance to reflect magic damage (default 0.30).
+	#法术反射几率
+	#Range: 0.0 ~ 1.0
+	spellReflectChance = 0.3
+	#Spell Reflection: reflected damage ratio (default 1.0).
+	#法术反射比例
+	#Range: 0.0 ~ 10.0
+	spellReflectRatio = 1.0
+	#Mana Siphon: magic damage taken converted into healing (default 0.10).
+	#法力虹吸转化比例
+	#Range: 0.0 ~ 1.0
+	manaSiphonRatio = 0.1
+	#Spell Purge: cooldown in ticks (default 100 = 5s).
+	#驱法破咒冷却
+	#Range: 1 ~ 24000
+	spellPurgeCooldown = 100
+	#Purification Field: aura radius in blocks (default 8).
+	#净化领域半径
+	#Range: 1.0 ~ 64.0
+	purifyFieldRadius = 8.0
+	#Purification Field: interval in ticks (default 60 = 3s).
+	#净化领域间隔
+	#Range: 5 ~ 24000
+	purifyFieldInterval = 60
+	#Spellbreak Blade: bonus damage per beneficial effect on the target (default 0.15).
+	#破法之刃每层增益增伤
+	#Range: 0.0 ~ 2.0
+	spellbreakPerBuff = 0.15
+	#Spellbreak Blade: maximum bonus damage (default 0.60).
+	#破法之刃增伤上限
+	#Range: 0.0 ~ 5.0
+	spellbreakMax = 0.6
+	#Arcane Body: one-time point cost (default 2000).
+	#奥术神体消耗
+	#Range: 1 ~ 9223372036854775807
+	arcaneUltCost = 2000
+
+#New skill values (crit/lifesteal/rebirth/healing aura) & skill reset. Changes apply immediately.
+#新增技能数值与技能重洗
+[newSkills]
+	#Crit: chance per point (0.001 = 0.1%/pt, 1000 pts = 100%).
+	#暴击几率每点
+	#Range: 1.0E-4 ~ 0.1
+	critChancePerPoint = 0.001
+	#Crit base damage multiplier (1.5 = 1.5x damage on crit).
+	#暴击基础伤害倍率
+	#Range: 1.0 ~ 10.0
+	critDamageBase = 1.5
+	#Crit Amp: crit damage multiplier per point (0.05 = +5%/pt).
+	#暴击增幅每点
+	#Range: 0.0 ~ 0.5
+	critDamagePerPoint = 0.05
+	#Lifesteal: heal ratio per point (0.001 = 0.1%/pt, 1000 pts = 100%).
+	#吸血每点
+	#Range: 1.0E-4 ~ 0.05
+	lifestealPerPoint = 0.001
+	#Lifesteal Amp: amount multiplier per point (0.04 = +4%/pt).
+	#吸血增幅每点
+	#Range: 0.0 ~ 0.5
+	lifestealAmpPerPoint = 0.04
+	#Rebirth: cooldown (ticks, 1200 = 1 min).
+	#凤凰涅槃冷却
+	#Range: 100 ~ 240000
+	reviveCooldownTicks = 1200
+	#Rebirth: health ratio on revive (0.5 = 50%).
+	#凤凰涅槃回血比例
+	#Range: 0.01 ~ 1.0
+	reviveHealthRatio = 0.5
+	#Death's Gaze: execute HP threshold (0.15 = below 15%).
+	#处决生命阈值
+	#Range: 0.01 ~ 0.9
+	reaperThreshold = 0.15
+	#Death's Gaze: execute chance (0.3 = 30%).
+	#处决概率
+	#Range: 0.01 ~ 1.0
+	reaperChance = 0.3
+	#Death's Gaze: execute damage (default 99999, instant kill).
+	#处决伤害
+	#Range: 100.0 ~ 1000000.0
+	reaperDamage = 99999.0
+	#Healing Aura: radius (blocks, default 10).
+	#治愈光环半径
+	#Range: 1.0 ~ 64.0
+	auraHealRadius = 10.0
+	#Skill reset (R key in screen): skill point refund ratio (1.0 = full, 0.8 = 80%).
+	#重洗返还比例
+	#Range: 0.0 ~ 1.0
+	resetRefundRate = 1.0
+	#Machine Resonance - Machine Star: one-time point cost (default 1000).
+	#机械之星消耗
+	#Range: 1 ~ 9223372036854775807
+	machineStarCost = 1000
+	#Machine Resonance skill: one-time point cost (default 5000; fake-player machines inherit the skill only when learned & enabled).
+	#机械共鸣技能消耗
+	#Range: 1 ~ 9223372036854775807
+	machineResonanceCost = 5000
+
+#属性每点加成（2026-08-29 新增）：14 基础 + 2 多级终极 + 10 增幅的全部每点数值，改动热重载生效
+[attributePerPoint]
+	#Body HP: +X max health per point (default 2.0)
+	#生命强化每点
+	#Range: 0.0 ~ 1000.0
+	bodyHpPerPoint = 2.0
+	#Body: +X armor per point (default 0.2)
+	#体魄护甲每点
+	#Range: 0.0 ~ 100.0
+	bodyArmorPerPoint = 0.2
+	#Body: +X damage reduction per point (default 0.0005 = 0.05%)
+	#体魄减伤每点
+	#Range: 0.0 ~ 1.0
+	bodyDrPerPoint = 5.0E-4
+	#Tough: +X armor per point (default 2.0, 2026-09-14).
+	#磐石之躯每级护甲
+	#Range: 0.0 ~ 1000.0
+	toughArmorPerPoint = 2.0
+	#Tough: +X armor toughness per point (default 1.0, 2026-09-14 was 0.3).
+	#磐石之躯每级护甲韧性
+	#Range: 0.0 ~ 1000.0
+	toughToughnessPerPoint = 1.0
+	#DEPRECATED 2026-09-14: Tough no longer grants knockback resistance; use the Steadfast ultimate instead.
+	#[已废弃] 磐石之躯不再提供击退抗性
+	#Range: 0.0 ~ 1.0
+	toughKbPerPoint = 0.001
+	#Blade: +X attack damage per point (default 1.0 = +10 per level; 2026-09-14, was 0.4)
+	#剑心通明每点（描述显示 = 本值 × 10）
+	#Range: 0.0 ~ 100.0
+	bladeDamagePerPoint = 1.0
+	#Attack Speed: +X attack speed per point (default 0.2 = +2 per level; 2026-09-14, was 0.02)
+	#疾风连击每点（描述显示 = 本值 × 10）
+	#Range: 0.0 ~ 100.0
+	attackSpeedPerPoint = 0.2
+	#Mining: +X mining speed per point (default 0.3)
+	#采掘挖速每点
+	#Range: 0.0 ~ 100.0
+	miningSpeedPerPoint = 0.3
+	#Move: +X movement speed per point (default 0.005)
+	#疾行移速每点
+	#Range: 0.0 ~ 100.0
+	moveSpeedPerPoint = 0.005
+	#Luck: +X luck per point (default 0.1)
+	#幸运每点
+	#Range: 0.0 ~ 100.0
+	luckPerPoint = 0.1
+	#Jump: +X jump strength per point (default 0.01)
+	#跳跃每点
+	#Range: 0.0 ~ 100.0
+	jumpPerPoint = 0.01
+	#Fly: +X fly speed per point (default 0.005)
+	#飞行每点
+	#Range: 0.0 ~ 100.0
+	flySpeedPerPoint = 0.005
+	#Swim: +X swim speed per point (default 0.005)
+	#游泳每点
+	#Range: 0.0 ~ 100.0
+	swimSpeedPerPoint = 0.005
+	#Armor Truth (now an ULTIMATE, cap 80): +X damage reduction per level (default 0.01 = 1%).
+	#金身真解每级免伤（已改为终极节点，上限 80）
+	#Range: 0.0 ~ 1.0
+	ampArmorDrPerPoint = 0.01
+	#Reach: +X blocks reach & attack range per level (default 1.0)
+	#长臂距离每级
+	#Range: 0.0 ~ 100.0
+	reachPerLevel = 1.0
+	#KB Resist: +X knockback resistance per level (default 0.1 = 10%)
+	#稳如泰山每级
+	#Range: 0.0 ~ 1.0
+	kbResistPerLevel = 0.1
+	#Amp HP: +X max health multiplier per point (default 0.1 = +10%)
+	#血魄真解每点
+	#Range: 0.0 ~ 10.0
+	ampHpPerPoint = 0.1
+	#Amp Tough: +X armor AND armor toughness multiplier per point (default 0.1 = +10%, 2026-09-14).
+	#磐石真解每级护甲与韧性
+	#Range: 0.0 ~ 10.0
+	ampToughPerPoint = 0.1
+	#Amp Luck: +X luck multiplier per point (default 0.1 = +10%)
+	#鸿运真解每点
+	#Range: 0.0 ~ 10.0
+	ampLuckPerPoint = 0.1
+	#Amp Damage: +X damage multiplier per point (default 0.1 = +10%)
+	#剑心真解每点
+	#Range: 0.0 ~ 10.0
+	ampDamagePerPoint = 0.1
+	#Amp Attack Speed: +X attack speed multiplier per point (default 0.1 = +100% per level; 2026-09-14, was 0.08)
+	#疾风真解每点
+	#Range: 0.0 ~ 10.0
+	ampAttackSpeedPerPoint = 0.1
+	#Amp Mining: +X mining speed multiplier per point (default 0.12 = +12%)
+	#破岩真解每点
+	#Range: 0.0 ~ 10.0
+	ampMiningPerPoint = 0.12
+	#Amp Move: +X movement multiplier per point (default 0.1 = +10%)
+	#健步真解每点
+	#Range: 0.0 ~ 10.0
+	ampMovePerPoint = 0.1
+	#Amp Jump: +X jump multiplier per point (default 0.1 = +10%)
+	#蹦跳真解每点
+	#Range: 0.0 ~ 10.0
+	ampJumpPerPoint = 0.1
+	#Amp Fly: +X fly speed multiplier per point (default 0.1 = +10%)
+	#御空真解每点
+	#Range: 0.0 ~ 10.0
+	ampFlyPerPoint = 0.1
+	#Amp Swim: +X swim multiplier per point (default 0.1 = +10%)
+	#游鱼真解每点
+	#Range: 0.0 ~ 10.0
+	ampSwimPerPoint = 0.1
+	#Zone job: target max total tick time in ms (default 45; higher = faster large zones but higher MSPT. 50ms is the hard limit - beyond it TPS drops)
+	#选区作业：每 tick 总耗时上限（毫秒，默认 45；调大=大选区更快但 MSPT 更高；50ms 是硬上限，超过会掉 TPS）
+	#Range: 10 ~ 48
+	zoneMspLimitMs = 45
+	#Zone batching: side length (blocks) of one batch on the X-Z plane, full height.
+	#A zone is split into batchSide x batchSide columns and processed batch by batch,
+	#so memory and per-tick load stay flat no matter how large the zone is.
+	#Smaller = smoother but more batch switches; 64 keeps one batch at 64 x 64 x worldHeight.
+	#选区分批：单个批次在 X-Z 平面上的边长（格），Y 方向不分批（全高）。
+	#选区会被切成 batchSide x batchSide 根柱逐批处理 → 内存与单 tick 负载不随选区面积增长。
+	#调小=更平滑但切批更频繁；默认 64 → 单批 = 64 x 64 x 世界高度。
+	#Range: 32 ~ 512
+	zoneBatchSide = 256
+

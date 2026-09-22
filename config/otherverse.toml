@@ -28,4 +28,6 @@
 	dimensional_primes = ["minecraft:overworld=otherverse:salt", "minecraft:the_nether=otherverse:sulfur", "minecraft:the_end=otherverse:quicksilver", "default=otherverse:cinnabar"]
 	#If this list is not empty, at least one of these items must be in your inventory for you to use the Sight.
 	sight_items = []
+	#Does breaking positive bindings anger the mob? Tamed mobs will not be angered regardless.
+	positive_binding_anger = true
 

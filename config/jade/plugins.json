@@ -51,10 +51,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "bf_blockpack": {
-    "fill": true,
-    "lantern": true
-  },
   "jade": {
     "coordinates.rel": false,
     "distance": false,
@@ -62,6 +58,10 @@
     "coordinates": false,
     "registry_name": "OFF",
     "mod_name": true
+  },
+  "zifeng_s_custom_skill_tree": {
+    "creative_energy": true,
+    "converter": true
   },
   "corpse": {
     "corpse": true

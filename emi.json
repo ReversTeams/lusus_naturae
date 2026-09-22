@@ -1,6 +1,14 @@
 {
   "favorites": [],
   "lookup_history": [
+    "item:cybernetic_system:sensor_door_green",
+    "item:cybernetic_system:first_aid_kit",
+    "item:vectoritems:holo_console",
+    "item:vectoritems:scan_goggles",
+    "item:item_scrapper:scrapping_hammer{Damage:0}",
+    "item:item_scrapper:scrapper_block",
+    "item:fieldemitters:access_badge",
+    "item:ags_modernmarkings:chalk",
     "item:cybernetic_system:pill_with_nanomachines",
     "item:cybernetic_system:nanomachines",
     "item:cybernetic_system:special_chip_dna",

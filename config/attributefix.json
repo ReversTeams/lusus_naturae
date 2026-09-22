@@ -143,6 +143,17 @@
         "value": 1000000
       }
     },
+    "zifeng_s_custom_skill_tree:damage_reduction": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
+      }
+    },
     "minecraft:generic.luck": {
       "enabled": true,
       "min": {
@@ -317,6 +328,17 @@
       "max": {
         "default": 1024,
         "value": 1000000
+      }
+    },
+    "zifeng_s_custom_skill_tree:mining_efficiency": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1024,
+        "value": 1024
       }
     },
     "minecraft:zombie.spawn_reinforcements": {
