@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "breach"
+	group: "57DB6583BE9451D5"
+	icon: "strangematter:research_tablet"
+	id: "49758EE7514D2C6B"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "Breach"
+}

@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "research_missions_2"
+	group: "4D8BD3AED5515646"
+	icon: "bibliocraft:clipboard"
+	id: "113C4083ED186B03"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "Research Missions"
+}

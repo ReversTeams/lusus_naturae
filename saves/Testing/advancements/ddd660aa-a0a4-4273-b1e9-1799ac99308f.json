@@ -281,15 +281,15 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/blast_furnace": {
-    "criteria": {
-      "has_smooth_stone": "2026-09-22 14:39:20 -0400"
-    },
-    "done": true
-  },
   "scp_additions:decon_achievement": {
     "criteria": {
       "decon_achievement": "2026-09-22 14:30:24 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2026-09-22 14:39:20 -0400"
     },
     "done": true
   },
@@ -305,7 +305,25 @@
     },
     "done": true
   },
+  "strangematter:research_master": {
+    "criteria": {
+      "complete_all_research": "2026-09-22 14:46:54 -0400"
+    },
+    "done": true
+  },
+  "strangematter:energy_harvester": {
+    "criteria": {
+      "craft_resonance_condenser": "2026-09-22 14:52:32 -0400"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2026-09-22 14:54:13 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/campfire": {
     "criteria": {
       "has_coal": "2026-09-22 14:54:13 -0400"
     },
@@ -317,27 +335,183 @@
     },
     "done": true
   },
-  "strangematter:energy_harvester": {
-    "criteria": {
-      "craft_resonance_condenser": "2026-09-22 14:52:32 -0400"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/campfire": {
-    "criteria": {
-      "has_coal": "2026-09-22 14:54:13 -0400"
-    },
-    "done": true
-  },
-  "strangematter:research_master": {
-    "criteria": {
-      "complete_all_research": "2026-09-22 14:46:54 -0400"
-    },
-    "done": true
-  },
   "minecraft:adventure/root": {
     "criteria": {
       "killed_something": "2026-09-22 14:58:42 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/jungle_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/acacia_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/dark_oak_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/mangrove_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/birch_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/cherry_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/crimson_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/bamboo_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/spruce_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/warped_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/oak_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 15:27:52 -0400"
+    },
+    "done": true
+  },
+  "otherverse:diagram": {
+    "criteria": {
+      "c": "2026-09-22 15:30:01 -0400"
+    },
+    "done": true
+  },
+  "refurbished_furniture:recipes/misc/slicing/string_from_cobweb": {
+    "criteria": {
+      "has_cobweb": "2026-09-22 15:34:46 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/bookshelf": {
+    "criteria": {
+      "has_book": "2026-09-22 15:55:55 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/lectern": {
+    "criteria": {
+      "has_book": "2026-09-22 15:55:55 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_bookshelf": {
+    "criteria": {
+      "has_book": "2026-09-22 15:55:55 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/writable_book": {
+    "criteria": {
+      "has_book": "2026-09-22 15:55:55 -0400"
+    },
+    "done": true
+  },
+  "otherverse:recipes/start": {
+    "criteria": {
+      "has_item": "2026-09-22 15:55:55 -0400"
+    },
+    "done": true
+  },
+  "sawmill:recipes/sawmill": {
+    "criteria": {
+      "has_fences": "2026-09-22 16:02:42 -0400"
+    },
+    "done": true
+  },
+  "flashlightmod:there_is_light": {
+    "criteria": {
+      "activate_flashlight": "2026-09-22 21:02:42 -0400"
+    },
+    "done": true
+  },
+  "otherverse:awakening": {
+    "criteria": {
+      "obtain": "2026-09-22 21:04:20 -0400"
+    },
+    "done": true
+  },
+  "usefulbackpacks:recipes/backpack_medium": {
+    "criteria": {
+      "has_small_backpack": "2026-09-22 21:04:32 -0400"
+    },
+    "done": true
+  },
+  "usefulbackpacks:recipes/filter_item": {
+    "criteria": {
+      "has_small_backpack": "2026-09-22 21:04:32 -0400"
+    },
+    "done": true
+  },
+  "usefulbackpacks:recipes/filter_tag": {
+    "criteria": {
+      "has_small_backpack": "2026-09-22 21:04:32 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/compacting_drawers": {
+    "criteria": {
+      "has_chest": "2026-09-22 21:04:40 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/detached_drawer": {
+    "criteria": {
+      "has_chest": "2026-09-22 21:04:40 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/controller": {
+    "criteria": {
+      "has_chest": "2026-09-22 21:04:40 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/upgrade_template": {
+    "criteria": {
+      "has_chest": "2026-09-22 21:04:40 -0400"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/controller_slave": {
+    "criteria": {
+      "has_chest": "2026-09-22 21:04:40 -0400"
     },
     "done": true
   },

@@ -1,0 +1,255 @@
+{
+	autofocus_id: "3E9280CE20199AC5"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "scavenging"
+	group: "57DB6583BE9451D5"
+	icon: "scraps:shard_wood"
+	id: "15CC5D26AD4C5462"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			entity_vis_size: 1.0f
+			id: "3E9280CE20199AC5"
+			size: 1.3d
+			tasks: [
+				{
+					entity_vis_idle_mode: "USE_GLOBAL"
+					entity_vis_offset_x: 0.0f
+					entity_vis_offset_y: 0.0f
+					entity_vis_rotation: 0.0f
+					entity_vis_silhouette_mode: "NONE"
+					entity_vis_size: 1.0f
+					entity_vis_spin_mode: "USE_GLOBAL"
+					entity_vis_tag_cycle_mode: "USE_GLOBAL"
+					entity_vis_tag_cycle_seconds: 0.0f
+					entity_vis_use_as_quest_icon: false
+					entity_vis_walk_mode: "USE_GLOBAL"
+					icon: "item_scrapper:scrapper_block"
+					id: "35069E305626DCFA"
+					observe_type: 0
+					timer: 0L
+					to_observe: "item_scrapper:scrapper_block"
+					type: "observation"
+				}
+				{
+					id: "3B00421E90A67800"
+					item: {
+						Count: 1
+						id: "item_scrapper:scrapping_hammer"
+						tag: {
+							Damage: 0
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+			]
+			title: "The Scrapper"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			entity_vis_size: 1.0f
+			id: "56E8116A1913AC07"
+			tasks: [{
+				id: "258A882021417075"
+				item: "scraps:shard_brick"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "2F81F996AF38E710"
+			tasks: [{
+				id: "77753C7DB855727C"
+				item: "scraps:shard_flint"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["420D50B59D5F7B57"]
+			entity_vis_size: 1.0f
+			id: "713AABD58DC7EE71"
+			tasks: [{
+				id: "359A4C1E54B3B940"
+				item: "scraps:shard_glass"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6A40D1EF39FD8B15"]
+			entity_vis_size: 1.0f
+			id: "36C7F03C0E2846EB"
+			tasks: [{
+				id: "595C4219E3B616FA"
+				item: "scraps:shard_leather"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "2744AF3B989574D3"
+			tasks: [{
+				id: "364F9BA4423D8EEB"
+				item: "scraps:shard_paper"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["2DE7EC83A3D0BDCD"]
+			entity_vis_size: 1.0f
+			id: "2B231B9143F79D3F"
+			tasks: [{
+				id: "556B4C89479B9A04"
+				item: "scraps:shard_wood"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "49F1198157F79472"
+			tasks: [{
+				id: "29D66FA86F2ACA2A"
+				item: "scraps:junk"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "499858542FFDBEB2"
+			size: 1.1d
+			tasks: [{
+				entity_vis_idle_mode: "USE_GLOBAL"
+				entity_vis_offset_x: 0.0f
+				entity_vis_offset_y: 0.0f
+				entity_vis_rotation: 0.0f
+				entity_vis_silhouette_mode: "NONE"
+				entity_vis_size: 1.0f
+				entity_vis_spin_mode: "USE_GLOBAL"
+				entity_vis_tag_cycle_mode: "USE_GLOBAL"
+				entity_vis_tag_cycle_seconds: 0.0f
+				entity_vis_use_as_quest_icon: false
+				entity_vis_walk_mode: "USE_GLOBAL"
+				icon: "refurbished_furniture:oak_crate"
+				id: "29B7268914A80F2D"
+				observe_type: 0
+				timer: 0L
+				to_observe: "refurbished_furniture:oak_crate"
+				type: "observation"
+			}]
+			title: "Crates"
+			x: 0.0d
+			y: -2.75d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "2DE7EC83A3D0BDCD"
+			tasks: [
+				{
+					id: "24BEDC45B49102D3"
+					item: "refurbished_furniture:oak_chair"
+					type: "item"
+				}
+				{
+					id: "2D5A716DBA0E7F28"
+					item: "refurbished_furniture:oak_desk"
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "00928B99C45F90F4"
+			size: 0.9d
+			tasks: [
+				{
+					id: "43F838B86E6C4AA6"
+					item: "cybernetic_system:soda_strenght"
+					type: "item"
+				}
+				{
+					id: "5930FFD69A4FE6B1"
+					item: "cybernetic_system:soda_haste"
+					type: "item"
+				}
+				{
+					id: "4B86FBE8802B911E"
+					item: "cybernetic_system:soda_absorption"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "6A40D1EF39FD8B15"
+			tasks: [
+				{
+					id: "5C9B3FB8A63699AC"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "refurbished_furniture:sofas"
+						}
+					}
+					title: "Any #refurbished_furniture:sofas"
+					type: "item"
+				}
+				{
+					id: "6208F59FA2C0DD7F"
+					item: {
+						Count: 1
+						id: "itemfilters:tag"
+						tag: {
+							value: "refurbished_furniture:stools"
+						}
+					}
+					title: "Any #refurbished_furniture:stools"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["3E9280CE20199AC5"]
+			entity_vis_size: 1.0f
+			id: "420D50B59D5F7B57"
+			tasks: [{
+				id: "7DEEBB6557FE84AE"
+				item: "vectoritems:glass_monitor_wide"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.5d
+		}
+	]
+	title: "Scavenging"
+}

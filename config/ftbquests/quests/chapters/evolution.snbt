@@ -1,0 +1,44 @@
+{
+	autofocus_id: "0AB572DBA3691EFE"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "evolution"
+	group: "3411F6EFC0336AB0"
+	icon: "fathomless:crimson_tendon"
+	id: "00C26307BC5DDF02"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["0AB572DBA3691EFE"]
+			entity_vis_size: 1.0f
+			id: "3A5C160F90B50CBA"
+			tasks: [{
+				id: "7F17622E6492BF88"
+				item: "scp_additions:level_1_keycard"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			entity_vis_size: 1.0f
+			id: "0AB572DBA3691EFE"
+			size: 1.25d
+			tasks: [{
+				id: "2BA792A16B37091B"
+				item: {
+					Count: 1
+					id: "otherverse:chalk"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	title: "Evolution"
+}

@@ -1,0 +1,23 @@
+{
+  "inventory": {
+    "0:0": "{Count:1b,id:\"tacz:modern_kinetic_gun\",tag:{GunCurrentAmmoCount:16,GunFireMode:\"SEMI\",GunId:\"eos:eos_hg57_t2\",HasBulletInBarrel:1b}}",
+    "0:9": "{Count:1b,id:\"vectoritems:scan_goggles\",tag:{gear_mods:{}}}",
+    "0:8": "{Count:1b,id:\"ftbquests:book\"}",
+    "0:35": "{Count:1b,id:\"patchouli:guide_book\",tag:{\"patchouli:book\":\"otherverse:essentials\"}}",
+    "0:27": "{Count:16b,id:\"tacz:ammo\",tag:{AmmoId:\"tacz_unidict:pistol\"}}",
+    "0:7": "{Count:1b,id:\"flashlightmod:flashlight\",tag:{BatterySlot:{Count:1b,id:\"flashlightmod:battery\",tag:{BatteryEnergy:9990}},IsOn:0b}}",
+    "0:6": "{Count:1b,id:\"usefulbackpacks:backpack_small\"}"
+  },
+  "kits": {
+    "main": {
+      "0:35": "{Count:1b,id:\"patchouli:guide_book\",tag:{\"patchouli:book\":\"otherverse:essentials\"}}",
+      "0:27": "{Count:16b,id:\"tacz:ammo\",tag:{AmmoId:\"tacz_unidict:pistol\"}}",
+      "0:7": "{Count:1b,id:\"flashlightmod:flashlight\",tag:{BatterySlot:{Count:1b,id:\"flashlightmod:battery\",tag:{BatteryEnergy:9990}},IsOn:0b}}",
+      "0:6": "{Count:1b,id:\"usefulbackpacks:backpack_small\"}",
+      "0:8": "{Count:1b,id:\"ftbquests:book\"}",
+      "0:0": "{Count:1b,id:\"tacz:modern_kinetic_gun\",tag:{GunCurrentAmmoCount:16,GunFireMode:\"SEMI\",GunId:\"eos:eos_hg57_t2\",HasBulletInBarrel:1b}}",
+      "0:9": "{Count:1b,id:\"vectoritems:scan_goggles\",tag:{gear_mods:{}}}"
+    }
+  },
+  "wipeBlacklist": []
+}
